@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Instrument Serif Regular";
+    src: url("./assets/fonts/InstrumentSerif-Regular.woff2") format("woff2"),
+      url("./assets/fonts/InstrumentSerif-Regular.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Instrument Serif Italic";
+    src: url("./assets/fonts/InstrumentSerif-Italic.woff2") format("woff2"),
+      url("./assets/fonts/InstrumentSerif-Italic.ttf") format("ttf");
+  }
+}
