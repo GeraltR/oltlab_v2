@@ -1,0 +1,12 @@
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+}
+
+@media (min-device-width: 360px) {
+  .mainPage {
+    height: 300vh;
+    flex-direction: row;
+  }
+}

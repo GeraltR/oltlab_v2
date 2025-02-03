@@ -1,0 +1,54 @@
+.logooltlabColumn {
+  display: flex;
+  flex-direction: row;
+}
+
+.logooltlabCenter {
+  background-color: var(--color-background);
+  color: var(--color-text-default);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+.logooltlabCenter div {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  gap: 0.17rem;
+  justify-content: center;
+  align-items: center;
+}
+.logooltlabCenter img {
+  width: 3rem;
+  height: 0.8rem;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoInsideLeft {
+  margin: 0;
+  float: right;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.logoInsideRight {
+  margin: 0;
+  float: left;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.logoInsideRightItalianNumber {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

@@ -1,0 +1,7 @@
+body {
+  --font-size-default: 16px;
+  --font-family-default: "Instrument Serif Regular";
+
+  --color-background: #000000;
+  --color-text-default: #ffffff;
+}
