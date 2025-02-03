@@ -1,5 +1,5 @@
 .bottomBar {
-  width: 100%;
+  width: 96%;
   min-width: 29rem;
   height: 98vh;
   margin: 0 auto;
@@ -12,8 +12,8 @@
 @media (min-device-width: 360px) {
   .bottomBar {
     display: flex;
-    width: 100%;
-    min-width: 23rem;
+    width: 96%;
+    min-width: 20rem;
     height: 98vh;
     flex-direction: row;
   }
