@@ -12,7 +12,7 @@ export function LayoutCenter() {
     <div className={styles.layoutCenter}>
       <LeftBar />
       <MainCenterLayout>
-        <TopCenterBar />
+        <TopCenterBar firstText="status:" secondText="work in progress..." />
         <InsideMainLayout></InsideMainLayout>
         <BottomLogoBar>
           <FooterCenter />

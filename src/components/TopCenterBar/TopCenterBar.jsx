@@ -1,10 +1,10 @@
 import styles from "./TopCenterBar.module.css";
 
-export function TopCenterBar() {
+export function TopCenterBar(props) {
   return (
     <div className={styles.topCenterBar}>
-      <div>status:</div>
-      <div>work in progress...</div>
+      <p className={styles.topCenterBarWithMarginLeft}>{props.firstText}</p>
+      <div className={styles.topCenterBarJustifyCenter}>{props.secondText}</div>
     </div>
   );
 }
