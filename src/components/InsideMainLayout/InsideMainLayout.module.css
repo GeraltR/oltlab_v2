@@ -1,0 +1,12 @@
+.InsideMainLayout {
+  width: 100%;
+  flex: 1;
+}
+
+/*mobile*/
+@media (min-device-width: 360px) {
+  .InsideMainLayout {
+    width: 100%;
+    flex: 1;
+  }
+}

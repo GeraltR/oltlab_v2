@@ -14,12 +14,20 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-top: 1.5rem;
+  margin-top: var(--main-top-margin);
 }
 
 .rightBarBottom {
-  height: 98vh;
+  position: absolute;
+  height: 2.8rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  top: 93vh;
+}
+
+@-moz-document url-prefix() {
+  .rightBarBottom {
+    top: 96vh;
+  }
 }

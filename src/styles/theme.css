@@ -4,4 +4,7 @@ body {
 
   --color-background: #000000;
   --color-text-default: #ffffff;
+
+  --main-top-margin: 1.5rem;
+  --main-bottom-margin: 1rem;
 }
