@@ -6,6 +6,9 @@ import { LeftBar } from "../LeftBar/LeftBar";
 import { MainCenterLayout } from "../MainCenterLayout/MainCenterLayout";
 import { RightBar } from "../RightBar/RightBar";
 import { TopCenterBar } from "../TopCenterBar/TopCenterBar";
+import { Hero } from "../Hero/Hero";
+
+import MAINIMAGE from "../../assets/img/mainprojects.png";
 
 export function LayoutCenter() {
   return (
@@ -13,7 +16,9 @@ export function LayoutCenter() {
       <LeftBar />
       <MainCenterLayout>
         <TopCenterBar firstText="status:" secondText="work in progress..." />
-        <InsideMainLayout></InsideMainLayout>
+        <InsideMainLayout>
+          <Hero heroImage={MAINIMAGE} />
+        </InsideMainLayout>
         <BottomLogoBar>
           <FooterCenter />
         </BottomLogoBar>
