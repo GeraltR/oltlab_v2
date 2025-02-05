@@ -1,0 +1,16 @@
+.insideChapter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+  justify-content: center;
+  align-items: end;
+}
+
+.insideChapter ul li {
+  width: 14rem;
+  height: 1.875rem;
+  text-align: right;
+}

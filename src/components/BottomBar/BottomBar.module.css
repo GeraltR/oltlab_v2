@@ -1,0 +1,8 @@
+.bottomBar {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  margin: 0;
+  justify-content: end;
+  align-items: end;
+}
