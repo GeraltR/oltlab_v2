@@ -1,0 +1,8 @@
+.topRightBar {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  margin-bottom: 1rem;
+  justify-content: left;
+  align-items: start;
+}

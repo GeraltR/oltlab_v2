@@ -1,0 +1,45 @@
+.rightChapter {
+  width: 100%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.rightChapterWithTopMargin {
+  width: 100%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.rightChapter ul li {
+  text-align: left;
+}
+
+.rightChapterNavLink {
+  margin-left: 1rem;
+}
+
+.rightChapterComingSoon {
+  width: 100%;
+  text-align: left;
+  text-wrap: nowrap;
+  margin: 0;
+  margin: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.rightOltEventLink {
+  margin-left: 2rem;
+}
