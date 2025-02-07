@@ -4,4 +4,5 @@
   margin: 0;
   justify-content: left;
   align-items: start;
+  cursor: pointer;
 }

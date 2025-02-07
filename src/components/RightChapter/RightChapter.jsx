@@ -34,7 +34,12 @@ export function RightChapter(props) {
       </div>
       <div className={styles.rightChapter}>
         <LeftBar />
-        <TopRightBar firstText={props.chapters[1].label} marginLeft="1.5rem" />
+        <TopRightBar
+          firstText={props.chapters[1].label}
+          marginLeft="1.5rem"
+          name={`project${props.chapters[1].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
         <InsideChapter>
           <ul>
             {projects.map((project) => {
@@ -44,6 +49,7 @@ export function RightChapter(props) {
                   <NavLink
                     className={styles.rightChapterNavLink}
                     to={project.link}
+                    name={`project${project.id}NavLink`}
                   >
                     {project.label}
                   </NavLink>
@@ -55,7 +61,12 @@ export function RightChapter(props) {
       </div>
       <div className={styles.rightChapter}>
         <LeftBar />
-        <TopRightBar firstText={props.chapters[2].label} marginLeft="1.5rem" />
+        <TopRightBar
+          firstText={props.chapters[2].label}
+          marginLeft="1.5rem"
+          name={`project${props.chapters[2].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
         <InsideChapter>
           <ul>
             {events.map((oltevent) => {
@@ -75,7 +86,12 @@ export function RightChapter(props) {
       </div>
       <div className={styles.rightChapter}>
         <LeftBar />
-        <TopRightBar firstText={props.chapters[3].label} marginLeft="1.5rem" />
+        <TopRightBar
+          firstText={props.chapters[3].label}
+          marginLeft="1.5rem"
+          onMouseMove={props.onMouseMove}
+          name={`project${props.chapters[3].id}Chapter`}
+        />
         <div className={styles.rightChapterComingSoon}>coming soon...</div>
       </div>
     </>

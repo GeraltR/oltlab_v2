@@ -10,7 +10,11 @@ export function LeftChapter(props) {
   return (
     <>
       <div className={styles.leftChapterWithTopMargin}>
-        <TopLeftBar firstText={props.chapters[0].label} />
+        <TopLeftBar
+          firstText={props.chapters[0].label}
+          name={`project${props.chapters[0].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
         <InsideChapter>
           <BottomBar>
             <p>contact</p>
@@ -18,8 +22,17 @@ export function LeftChapter(props) {
         </InsideChapter>
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar chapter={props.chapters[1].key} />
-        <TopLeftBar firstText={props.chapters[1].label} marginLeft="1.5rem" />
+        <LeftBar
+          chapter={props.chapters[1].key}
+          name={`project${props.chapters[1].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
+        <TopLeftBar
+          firstText={props.chapters[1].label}
+          marginLeft="1.5rem"
+          name={`project${props.chapters[1].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
         <InsideChapter>
           <ul>
             <li>hello@oltlab.net</li>
@@ -34,12 +47,30 @@ export function LeftChapter(props) {
         </InsideChapter>
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar chapter={props.chapters[2].key} />
-        <TopLeftBar firstText={props.chapters[2].label} marginLeft="1.5rem" />
+        <LeftBar
+          chapter={props.chapters[2].key}
+          name={`project${props.chapters[2].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
+        <TopLeftBar
+          firstText={props.chapters[2].label}
+          marginLeft="1.5rem"
+          name={`project${props.chapters[2].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar chapter={props.chapters[3].key} />
-        <TopLeftBar firstText={props.chapters[3].label} marginLeft="1.5rem" />
+        <LeftBar
+          chapter={props.chapters[3].key}
+          name={`project${props.chapters[3].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
+        <TopLeftBar
+          firstText={props.chapters[3].label}
+          marginLeft="1.5rem"
+          name={`project${props.chapters[3].id}Chapter`}
+          onMouseMove={props.onMouseMove}
+        />
       </div>
     </>
   );

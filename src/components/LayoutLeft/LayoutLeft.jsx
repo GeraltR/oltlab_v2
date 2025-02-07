@@ -9,7 +9,10 @@ export function LayoutLeft(props) {
     <div className={styles.layoutLeft}>
       <LeftBar />
       <MainCenterLayout>
-        <LeftChapter chapters={props.chapters}></LeftChapter>
+        <LeftChapter
+          chapters={props.chapters}
+          onMouseMove={props.onMouseMove}
+        ></LeftChapter>
       </MainCenterLayout>
       <RightBar topText="1" bottomText="I" />
     </div>

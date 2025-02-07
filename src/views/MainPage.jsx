@@ -18,11 +18,28 @@ export function MainPage() {
     { id: 7, key: "d", label: "store" },
   ];
 
+  let activeName = "";
+
+  const handleChapterOnMouseMove = (event) => {
+    //alert(event.target.name);
+    if (event.target.id != activeName) {
+      activeName = event.target.id;
+      console.log("Jestem");
+      console.log(activeName);
+    }
+  };
+
   return (
     <div className={styles.mainPage}>
-      <LayoutLeft chapters={leftChapters} />
+      <LayoutLeft
+        chapters={leftChapters}
+        onMouseMove={(e) => handleChapterOnMouseMove(e)}
+      />
       <LayoutCenter />
-      <LayoutRight chapters={rightChapters} />
+      <LayoutRight
+        chapters={rightChapters}
+        onMouseMove={(e) => handleChapterOnMouseMove(e)}
+      />
     </div>
   );
 }

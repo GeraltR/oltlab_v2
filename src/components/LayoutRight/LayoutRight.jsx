@@ -10,7 +10,10 @@ export function LayoutRight(props) {
     <div className={styles.layoutRight}>
       <LeftBar />
       <MainCenterLayout>
-        <RightChapter chapters={props.chapters}></RightChapter>
+        <RightChapter
+          chapters={props.chapters}
+          onMouseMove={props.onMouseMove}
+        ></RightChapter>
       </MainCenterLayout>
       <RightBar topText="3" bottomText="III" />
     </div>
