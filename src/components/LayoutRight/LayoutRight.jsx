@@ -5,12 +5,12 @@ import { RightBar } from "../RightBar/RightBar";
 
 import styles from "./LayoutRight.module.css";
 
-export function LayoutRight() {
+export function LayoutRight(props) {
   return (
     <div className={styles.layoutRight}>
       <LeftBar />
       <MainCenterLayout>
-        <RightChapter></RightChapter>
+        <RightChapter chapters={props.chapters}></RightChapter>
       </MainCenterLayout>
       <RightBar topText="3" bottomText="III" />
     </div>

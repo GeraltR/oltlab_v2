@@ -4,12 +4,12 @@ import { MainCenterLayout } from "../MainCenterLayout/MainCenterLayout";
 import { RightBar } from "../RightBar/RightBar";
 import styles from "./LayoutLeft.module.css";
 
-export function LayoutLeft() {
+export function LayoutLeft(props) {
   return (
     <div className={styles.layoutLeft}>
       <LeftBar />
       <MainCenterLayout>
-        <LeftChapter></LeftChapter>
+        <LeftChapter chapters={props.chapters}></LeftChapter>
       </MainCenterLayout>
       <RightBar topText="1" bottomText="I" />
     </div>

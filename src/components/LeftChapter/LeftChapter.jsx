@@ -6,18 +6,11 @@ import { InsideChapter } from "../InsideChapter/InsideChapter";
 import { SVGPolishFlag } from "../svgPolishFlag/svgPolishFlag";
 import SvgFranceFlag from "../SvgFranceFlag/SvgFranceFlag";
 
-export function LeftChapter() {
-  const chapters = [
-    { id: "1", key: "", label: "olt|tlo website", rightlabels: [{}] },
-    { id: "2", key: "a", label: "olt.lab", rightlabels: [{}] },
-    { id: "3", key: "b", label: "tlo.gallery" },
-    { id: "4", key: "c", label: "enojy" },
-  ];
-
+export function LeftChapter(props) {
   return (
     <>
       <div className={styles.leftChapterWithTopMargin}>
-        <TopLeftBar firstText={chapters[0].label} />
+        <TopLeftBar firstText={props.chapters[0].label} />
         <InsideChapter>
           <BottomBar>
             <p>contact</p>
@@ -25,8 +18,8 @@ export function LeftChapter() {
         </InsideChapter>
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar chapter={chapters[1].key} />
-        <TopLeftBar firstText={chapters[1].label} marginLeft="1.5rem" />
+        <LeftBar chapter={props.chapters[1].key} />
+        <TopLeftBar firstText={props.chapters[1].label} marginLeft="1.5rem" />
         <InsideChapter>
           <ul>
             <li>hello@oltlab.net</li>
@@ -41,12 +34,12 @@ export function LeftChapter() {
         </InsideChapter>
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar chapter={chapters[2].key} />
-        <TopLeftBar firstText={chapters[2].label} marginLeft="1.5rem" />
+        <LeftBar chapter={props.chapters[2].key} />
+        <TopLeftBar firstText={props.chapters[2].label} marginLeft="1.5rem" />
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar chapter={chapters[3].key} />
-        <TopLeftBar firstText={chapters[3].label} marginLeft="1.5rem" />
+        <LeftBar chapter={props.chapters[3].key} />
+        <TopLeftBar firstText={props.chapters[3].label} marginLeft="1.5rem" />
       </div>
     </>
   );

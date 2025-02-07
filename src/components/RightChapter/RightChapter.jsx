@@ -6,14 +6,7 @@ import { TopRightBar } from "../TopRightBar/TopRightBar";
 import styles from "./RightChapter.module.css";
 import { TopLeftBar } from "../TopLeftBar/TopLeftBar";
 
-export function RightChapter() {
-  const chapters = [
-    { id: 4, key: "a", label: "" },
-    { id: 5, key: "b", label: "projects" },
-    { id: 6, key: "c", label: "event" },
-    { id: 7, key: "d", label: "store" },
-  ];
-
+export function RightChapter(props) {
   const projects = [
     { id: 29, key: "a", label: "PL_3D_14/5_2024", link: "" },
     { id: 28, key: "b", label: "FR_3D_GToBC_2024", link: "" },
@@ -32,7 +25,7 @@ export function RightChapter() {
   return (
     <>
       <div className={styles.rightChapterWithTopMargin}>
-        <TopLeftBar firstText={chapters[0].label} />
+        <TopLeftBar firstText={props.chapters[0].label} />
         <InsideChapter>
           <BottomBar>
             <p>recent</p>
@@ -40,8 +33,8 @@ export function RightChapter() {
         </InsideChapter>
       </div>
       <div className={styles.rightChapter}>
-        <LeftBar chapter={chapters[1].key} />
-        <TopRightBar firstText={chapters[1].label} marginLeft="1.5rem" />
+        <LeftBar />
+        <TopRightBar firstText={props.chapters[1].label} marginLeft="1.5rem" />
         <InsideChapter>
           <ul>
             {projects.map((project) => {
@@ -61,8 +54,8 @@ export function RightChapter() {
         </InsideChapter>
       </div>
       <div className={styles.rightChapter}>
-        <LeftBar chapter={chapters[2].key} />
-        <TopRightBar firstText={chapters[2].label} marginLeft="1.5rem" />
+        <LeftBar />
+        <TopRightBar firstText={props.chapters[2].label} marginLeft="1.5rem" />
         <InsideChapter>
           <ul>
             {events.map((oltevent) => {
@@ -81,8 +74,8 @@ export function RightChapter() {
         </InsideChapter>
       </div>
       <div className={styles.rightChapter}>
-        <LeftBar chapter={chapters[3].key} />
-        <TopRightBar firstText={chapters[3].label} marginLeft="1.5rem" />
+        <LeftBar />
+        <TopRightBar firstText={props.chapters[3].label} marginLeft="1.5rem" />
         <div className={styles.rightChapterComingSoon}>coming soon...</div>
       </div>
     </>
