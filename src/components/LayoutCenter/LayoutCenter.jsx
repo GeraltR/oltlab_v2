@@ -8,16 +8,14 @@ import { RightBar } from "../RightBar/RightBar";
 import { TopCenterBar } from "../TopCenterBar/TopCenterBar";
 import { Hero } from "../Hero/Hero";
 
-import MAINIMAGE from "../../assets/img/mainprojects.png";
-
-export function LayoutCenter() {
+export function LayoutCenter(props) {
   return (
     <div className={styles.layoutCenter}>
       <LeftBar />
       <MainCenterLayout>
         <TopCenterBar firstText="status:" secondText="work in progress..." />
         <InsideMainLayout>
-          <Hero heroImage={MAINIMAGE} />
+          <Hero heroImage={props.heroImage} />
         </InsideMainLayout>
         <BottomLogoBar>
           <FooterCenter />
