@@ -20,8 +20,8 @@ import M14BY5 from "../assets/img/main14by5.png";
 let activeName = "";
 
 export function MainPage() {
-  const [mainImage, setMainImage] = useState(OLTIMAGE);
-  const [indexMainImage, setIndexMainImage] = useState(2);
+  const [mainImage, setMainImage] = useState();
+  const [indexMainImage, setIndexMainImage] = useState();
 
   const leftChapters = [
     { id: 1, key: "", label: "olt|tlo website", rightlabels: [{}] },
