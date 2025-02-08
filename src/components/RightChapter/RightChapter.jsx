@@ -33,7 +33,6 @@ export function RightChapter(props) {
         </InsideChapter>
       </div>
       <div className={styles.rightChapter}>
-        <LeftBar />
         <TopRightBar
           firstText={props.chapters[1].label}
           marginLeft="1.5rem"
@@ -60,7 +59,6 @@ export function RightChapter(props) {
         </InsideChapter>
       </div>
       <div className={styles.rightChapter}>
-        <LeftBar />
         <TopRightBar
           firstText={props.chapters[2].label}
           marginLeft="1.5rem"
@@ -71,21 +69,22 @@ export function RightChapter(props) {
           <ul>
             {events.map((oltevent) => {
               return (
-                <li key={oltevent.key} name={`oltevent${oltevent.id}LI`}>
-                  <NavLink
-                    className={styles.rightOltEventLink}
-                    to={oltevent.link}
-                  >
-                    {oltevent.label}
-                  </NavLink>
-                </li>
+                <>
+                  <li key={oltevent.key} name={`oltevent${oltevent.id}LI`}>
+                    <NavLink
+                      className={styles.rightOltEventLink}
+                      to={oltevent.link}
+                    >
+                      {oltevent.label}
+                    </NavLink>
+                  </li>
+                </>
               );
             })}
           </ul>
         </InsideChapter>
       </div>
       <div className={styles.rightChapter}>
-        <LeftBar />
         <TopRightBar
           firstText={props.chapters[3].label}
           marginLeft="1.5rem"

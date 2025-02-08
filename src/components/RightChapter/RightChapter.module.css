@@ -25,6 +25,11 @@
   text-align: left;
 }
 
+.rightChapter li:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover);
+}
+
 .rightChapterNavLink {
   margin-left: 1rem;
 }

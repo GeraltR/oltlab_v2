@@ -1,4 +1,3 @@
-import { LeftBar } from "../LeftBar/LeftBar";
 import { TopLeftBar } from "../TopLeftBar/TopLeftBar";
 import { BottomBar } from "../BottomBar/BottomBar";
 import styles from "./LeftChapter.module.css";
@@ -22,12 +21,8 @@ export function LeftChapter(props) {
         </InsideChapter>
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar
-          chapter={props.chapters[1].key}
-          name={`project${props.chapters[1].id}Chapter`}
-          onMouseMove={props.onMouseMove}
-        />
         <TopLeftBar
+          chapter={props.chapters[1].key}
           firstText={props.chapters[1].label}
           marginLeft="1.5rem"
           name={`project${props.chapters[1].id}Chapter`}
@@ -47,12 +42,8 @@ export function LeftChapter(props) {
         </InsideChapter>
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar
-          chapter={props.chapters[2].key}
-          name={`project${props.chapters[2].id}Chapter`}
-          onMouseMove={props.onMouseMove}
-        />
         <TopLeftBar
+          chapter={props.chapters[2].key}
           firstText={props.chapters[2].label}
           marginLeft="1.5rem"
           name={`project${props.chapters[2].id}Chapter`}
@@ -60,12 +51,8 @@ export function LeftChapter(props) {
         />
       </div>
       <div className={styles.leftChapter}>
-        <LeftBar
-          chapter={props.chapters[3].key}
-          name={`project${props.chapters[3].id}Chapter`}
-          onMouseMove={props.onMouseMove}
-        />
         <TopLeftBar
+          chapter={props.chapters[3].key}
           firstText={props.chapters[3].label}
           marginLeft="1.5rem"
           name={`project${props.chapters[3].id}Chapter`}
