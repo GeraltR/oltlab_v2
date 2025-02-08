@@ -69,16 +69,14 @@ export function RightChapter(props) {
           <ul>
             {events.map((oltevent) => {
               return (
-                <>
-                  <li key={oltevent.key} name={`oltevent${oltevent.id}LI`}>
-                    <NavLink
-                      className={styles.rightOltEventLink}
-                      to={oltevent.link}
-                    >
-                      {oltevent.label}
-                    </NavLink>
-                  </li>
-                </>
+                <li key={oltevent.key} name={`oltevent${oltevent.id}LI`}>
+                  <NavLink
+                    className={styles.rightOltEventLink}
+                    to={oltevent.link}
+                  >
+                    {oltevent.label}
+                  </NavLink>
+                </li>
               );
             })}
           </ul>
