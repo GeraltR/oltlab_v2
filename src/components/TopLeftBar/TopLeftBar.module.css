@@ -1,7 +1,11 @@
 .topLeftBar {
   width: 100%;
+  display: flex;
   margin: 0;
-  justify-content: left;
   align-items: start;
   cursor: pointer;
+}
+
+.topLeftBarChapter {
+  margin-left: 1.5rem;
 }

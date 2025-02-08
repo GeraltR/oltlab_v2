@@ -6,19 +6,14 @@ export function TopLeftBar(props) {
     <>
       <div className={styles.leftBar}>
         <NavLink
+          className={styles.topLeftBar}
+          style={{ marginLeft: `${props.marginLeft}` }}
           to={props.linkTo}
           id={props.name}
           onMouseMove={props.onMouseMove}
         >
-          {props.chapter}
-        </NavLink>
-        <NavLink
-          className={styles.topLeftBar}
-          style={{ marginLeft: `${props.marginLeft}` }}
-          id={props.name}
-          onMouseMove={props.onMouseMove}
-        >
-          {props.firstText}
+          <div>{props.chapter}</div>
+          <div className={styles.topLeftBarChapter}>{props.firstText}</div>
         </NavLink>
       </div>
     </>
