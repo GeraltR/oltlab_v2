@@ -16,10 +16,10 @@ export function RightChapter(props) {
   ];
 
   const events = [
-    { id: 8, key: "a", label: "Stretching 10.10–11.11.2024", link: "" },
-    { id: 9, key: "b", label: "Belgrade 23.06–30.06.2024", link: "" },
-    { id: 10, key: "c", label: "Adrian Zert 09.03–04.04.2024", link: "" },
-    { id: 11, key: "d", label: "14by5 23.02–03.03.2024", link: "" },
+    { id: 24, key: "a", label: "Stretching 10.10–11.11.2024", link: "" },
+    { id: 23, key: "b", label: "Belgrade 23.06–30.06.2024", link: "" },
+    { id: 22, key: "c", label: "Adrian Zert 09.03–04.04.2024", link: "" },
+    { id: 21, key: "d", label: "14by5 23.02–03.03.2024", link: "" },
   ];
 
   return (
@@ -37,18 +37,28 @@ export function RightChapter(props) {
           firstText={props.chapters[1].label}
           marginLeft="1.5rem"
           name={`project${props.chapters[1].id}Chapter`}
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         />
         <InsideChapter>
           <ul>
             {projects.map((project) => {
               return (
-                <li key={project.key} name={`project${project.id}LI`}>
+                <li
+                  key={project.key}
+                  name={`project${project.id}LI`}
+                  id={`project${project.id}Chapter`}
+                  onMouseEnter={props.onMouseEnter}
+                  onMouseLeave={props.onMouseLeave}
+                >
                   {project.id}
                   <NavLink
                     className={styles.rightChapterNavLink}
                     to={project.link}
                     name={`project${project.id}NavLink`}
+                    id={`project${project.id}Chapter`}
+                    onMouseEnter={props.onMouseEnter}
+                    onMouseLeave={props.onMouseLeave}
                   >
                     {project.label}
                   </NavLink>
@@ -63,16 +73,26 @@ export function RightChapter(props) {
           firstText={props.chapters[2].label}
           marginLeft="1.5rem"
           name={`project${props.chapters[2].id}Chapter`}
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         />
         <InsideChapter>
           <ul>
             {events.map((oltevent) => {
               return (
-                <li key={oltevent.key} name={`oltevent${oltevent.id}LI`}>
+                <li
+                  key={oltevent.key}
+                  name={`oltevent${oltevent.id}LI`}
+                  id={`project${oltevent.id}Chapter`}
+                  onMouseEnter={props.onMouseEnter}
+                  onMouseLeave={props.onMouseLeave}
+                >
                   <NavLink
                     className={styles.rightOltEventLink}
                     to={oltevent.link}
+                    id={`project${oltevent.id}Chapter`}
+                    onMouseEnter={props.onMouseEnter}
+                    onMouseLeave={props.onMouseLeave}
                   >
                     {oltevent.label}
                   </NavLink>
@@ -86,7 +106,8 @@ export function RightChapter(props) {
         <TopRightBar
           firstText={props.chapters[3].label}
           marginLeft="1.5rem"
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
           name={`project${props.chapters[3].id}Chapter`}
         />
         <div className={styles.rightChapterComingSoon}>coming soon...</div>

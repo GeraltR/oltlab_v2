@@ -12,7 +12,8 @@ export function LeftChapter(props) {
         <TopLeftBar
           firstText={props.chapters[0].label}
           name={`project${props.chapters[0].id}Chapter`}
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         />
         <InsideChapter>
           <BottomBar>
@@ -26,7 +27,8 @@ export function LeftChapter(props) {
           firstText={props.chapters[1].label}
           marginLeft="1.5rem"
           name={`project${props.chapters[1].id}Chapter`}
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         />
         <InsideChapter>
           <ul>
@@ -47,7 +49,8 @@ export function LeftChapter(props) {
           firstText={props.chapters[2].label}
           marginLeft="1.5rem"
           name={`project${props.chapters[2].id}Chapter`}
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         />
       </div>
       <div className={styles.leftChapter}>
@@ -56,7 +59,8 @@ export function LeftChapter(props) {
           firstText={props.chapters[3].label}
           marginLeft="1.5rem"
           name={`project${props.chapters[3].id}Chapter`}
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         />
       </div>
     </>

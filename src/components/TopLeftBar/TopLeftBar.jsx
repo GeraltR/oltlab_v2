@@ -9,11 +9,10 @@ export function TopLeftBar(props) {
         style={{ marginLeft: `${props.marginLeft}` }}
         to={props.linkTo}
         id={props.name}
-        onMouseMove={props.onMouseMove}
+        onMouseEnter={props.onMouseEnter}
+        onMouseLeave={props.onMouseLeave}
       >
-        <div onMouseMove={props.onMouseMove} id={props.name}>
-          {props.chapter}
-        </div>
+        <div id={props.name}>{props.chapter}</div>
         <div className={styles.topLeftBarChapter} id={props.name}>
           {props.firstText}
         </div>

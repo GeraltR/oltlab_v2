@@ -2,11 +2,20 @@ import { LayoutCenter } from "../components/LayoutCenter/LayoutCenter";
 import { LayoutLeft } from "../components/LayoutLeft/LayoutLeft";
 import { LayoutRight } from "../components/LayoutRight/LayoutRight";
 import styles from "./MainPage.module.css";
+import { useEffect, useState } from "react";
 
-import OLTIMAGE from "../assets/img/mainprojects.png";
+import OLTIMAGE from "../assets/img/mainoltlab.png";
 import TLOIMAGE from "../assets/img/maintlo.png";
 import ENOJYIMAGE from "../assets/img/mainenojy.png";
-import { useEffect, useState } from "react";
+import PL_3D_145_2024 from "../assets/img/mainpl_3d_145_2024.png";
+import FR_3D_GTOBC_2024 from "../assets/img/mainfr_3d_gtobc_2024.png";
+import FR_ARCG_POM_2024 from "../assets/img/mainfr_arch_pom_2024.png";
+import PL_URB_KAT_2024 from "../assets/img/mainpl_urb_kat_2024.png";
+import FR_ARCH_CONC_2024 from "../assets/img/mainfr_arch_conc_2024.png";
+import STERCHING from "../assets/img/mainprojects.png";
+import BELGRADE from "../assets/img/mainbelgrade.png";
+import ADRIANZERT from "../assets/img/mainadrianzert.png";
+import M14BY5 from "../assets/img/main14by5.png";
 
 let activeName = "";
 
@@ -15,20 +24,20 @@ export function MainPage() {
   const [indexMainImage, setIndexMainImage] = useState(2);
 
   const leftChapters = [
-    { id: "1", key: "", label: "olt|tlo website", rightlabels: [{}] },
-    { id: "2", key: "a", label: "olt.lab", rightlabels: [{}] },
-    { id: "3", key: "b", label: "tlo.gallery" },
-    { id: "4", key: "c", label: "enojy" },
+    { id: 1, key: "", label: "olt|tlo website", rightlabels: [{}] },
+    { id: 2, key: "a", label: "olt.lab", rightlabels: [{}] },
+    { id: 3, key: "b", label: "tlo.gallery" },
+    { id: 4, key: "c", label: "enojy" },
   ];
 
   const rightChapters = [
-    { id: 4, key: "a", label: "" },
-    { id: 5, key: "b", label: "projects" },
-    { id: 6, key: "c", label: "event" },
-    { id: 7, key: "d", label: "store" },
+    { id: 5, key: "a", label: "" },
+    { id: 6, key: "b", label: "projects" },
+    { id: 7, key: "c", label: "event" },
+    { id: 8, key: "d", label: "store" },
   ];
 
-  const handleChapterOnMouseMove = (event) => {
+  const handleChapteronMouseEnter = (event) => {
     if (event.target.id != activeName) {
       activeName = event.target.id;
       const index = String(
@@ -38,13 +47,38 @@ export function MainPage() {
     }
   };
 
+  const handleChapterMoseLeave = (event) => {
+    activeName = "";
+    setIndexMainImage(0);
+  };
+
   useEffect(() => {
-    if (indexMainImage == 2) {
+    if (indexMainImage == 0) {
+      setMainImage();
+    } else if (indexMainImage == 2) {
       setMainImage(OLTIMAGE);
     } else if (indexMainImage == 3) {
       setMainImage(TLOIMAGE);
     } else if (indexMainImage == 4) {
       setMainImage(ENOJYIMAGE);
+    } else if (indexMainImage == 21) {
+      setMainImage(M14BY5);
+    } else if (indexMainImage == 22) {
+      setMainImage(ADRIANZERT);
+    } else if (indexMainImage == 23) {
+      setMainImage(BELGRADE);
+    } else if (indexMainImage == 24) {
+      setMainImage(STERCHING);
+    } else if (indexMainImage == 25) {
+      setMainImage(FR_ARCH_CONC_2024);
+    } else if (indexMainImage == 26) {
+      setMainImage(PL_URB_KAT_2024);
+    } else if (indexMainImage == 27) {
+      setMainImage(FR_ARCG_POM_2024);
+    } else if (indexMainImage == 28) {
+      setMainImage(FR_3D_GTOBC_2024);
+    } else if (indexMainImage == 29) {
+      setMainImage(PL_3D_145_2024);
     }
   }, [indexMainImage]);
 
@@ -52,12 +86,14 @@ export function MainPage() {
     <div className={styles.mainPage}>
       <LayoutLeft
         chapters={leftChapters}
-        onMouseMove={(e) => handleChapterOnMouseMove(e)}
+        onMouseEnter={(e) => handleChapteronMouseEnter(e)}
+        onMouseLeave={(e) => handleChapterMoseLeave(e)}
       />
       <LayoutCenter heroImage={mainImage} />
       <LayoutRight
         chapters={rightChapters}
-        onMouseMove={(e) => handleChapterOnMouseMove(e)}
+        onMouseEnter={(e) => handleChapteronMouseEnter(e)}
+        onMouseLeave={(e) => handleChapterMoseLeave(e)}
       />
     </div>
   );

@@ -11,7 +11,8 @@ export function LayoutLeft(props) {
       <MainCenterLayout>
         <LeftChapter
           chapters={props.chapters}
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         ></LeftChapter>
       </MainCenterLayout>
       <RightBar topText="1" bottomText="I" />

@@ -12,7 +12,8 @@ export function LayoutRight(props) {
       <MainCenterLayout>
         <RightChapter
           chapters={props.chapters}
-          onMouseMove={props.onMouseMove}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         ></RightChapter>
       </MainCenterLayout>
       <RightBar topText="3" bottomText="III" />
