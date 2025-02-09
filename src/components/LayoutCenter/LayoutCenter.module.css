@@ -9,7 +9,7 @@
 }
 
 /*mobile*/
-@media (min-device-width: 360px) {
+@media (max-device-width: 414px) {
   .layoutCenter {
     width: 25rem;
   }
