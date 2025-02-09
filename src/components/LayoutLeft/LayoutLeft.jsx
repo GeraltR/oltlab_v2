@@ -5,8 +5,13 @@ import { RightBar } from "../RightBar/RightBar";
 import styles from "./LayoutLeft.module.css";
 
 export function LayoutLeft(props) {
+  //
   return (
-    <div className={styles.layoutLeft}>
+    <div
+      className={`${
+        props.isMobileDevice ? styles.layoutMobile : styles.layoutLeft
+      }`}
+    >
       <LeftBar />
       <MainCenterLayout>
         <LeftChapter
@@ -15,7 +20,11 @@ export function LayoutLeft(props) {
           onMouseLeave={props.onMouseLeave}
         ></LeftChapter>
       </MainCenterLayout>
-      <RightBar topText="1" bottomText="I" />
+      <RightBar
+        topText="1"
+        bottomText="I"
+        bottomTextLeft="all rights reserved"
+      />
     </div>
   );
 }

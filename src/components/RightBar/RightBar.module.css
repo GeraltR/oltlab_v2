@@ -1,7 +1,7 @@
 .rightBar {
   width: 2%;
   min-width: 1rem;
-  height: 98vh;
+  height: 98dvh;
   margin: 0;
   padding: 0;
   display: flex;
@@ -23,11 +23,24 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  top: 93vh;
+  top: 93dvh;
+}
+.rightBarBottomLeft {
+  position: absolute;
+  height: 2.8rem;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  top: 93dvh;
+  left: 8rem;
+  text-align: left;
 }
 
 @-moz-document url-prefix() {
+  .rightBarBottomLeft {
+    top: 95.5%;
+  }
   .rightBarBottom {
-    top: 96vh;
+    top: 95.5%;
   }
 }

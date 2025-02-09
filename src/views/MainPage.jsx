@@ -20,8 +20,14 @@ import M14BY5 from "../assets/img/main14by5.png";
 let activeName = "";
 
 export function MainPage() {
-  const [mainImage, setMainImage] = useState();
-  const [indexMainImage, setIndexMainImage] = useState();
+  const [windowSize, setWindowSize] = useState({
+    width: 0,
+    height: 0,
+  });
+  const [mainImage, setMainImage] = useState(OLTIMAGE);
+  const [indexMainImage, setIndexMainImage] = useState(2);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+  const [heighDeviceSize, setHeighDeviceSize] = useState(3);
 
   const leftChapters = [
     { id: 1, key: "", label: "olt|tlo website", rightlabels: [{}] },
@@ -82,14 +88,37 @@ export function MainPage() {
     }
   }, [indexMainImage]);
 
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+      setIsMobileDevice(window.innerWidth < 1320 || window.innerHeight < 730);
+      if (window.innerHeight < 730) setHeighDeviceSize(1);
+      else if (window.innerHeight < 900) setHeighDeviceSize(2);
+      else setHeighDeviceSize(3);
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className={styles.mainPage}>
+    <div
+      className={`${isMobileDevice ? styles.mainPageMobile : styles.mainPage}`}
+    >
       <LayoutLeft
+        isMobileDevice={isMobileDevice}
         chapters={leftChapters}
         onMouseEnter={(e) => handleChapteronMouseEnter(e)}
         onMouseLeave={(e) => handleChapterMoseLeave(e)}
       />
-      <LayoutCenter heroImage={mainImage} />
+      <LayoutCenter
+        isMobileDevice={isMobileDevice}
+        heroImage={mainImage}
+        heighDeviceSize={heighDeviceSize}
+      />
       <LayoutRight
         chapters={rightChapters}
         onMouseEnter={(e) => handleChapteronMouseEnter(e)}

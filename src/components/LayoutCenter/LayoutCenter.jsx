@@ -15,7 +15,11 @@ export function LayoutCenter(props) {
       <MainCenterLayout>
         <TopCenterBar firstText="status:" secondText="work in progress..." />
         <InsideMainLayout>
-          <Hero heroImage={props.heroImage} />
+          <Hero
+            isMobileDevice={props.isMobileDevice}
+            heighDeviceSize={props.heighDeviceSize}
+            heroImage={props.heroImage}
+          />
         </InsideMainLayout>
         <BottomLogoBar>
           <FooterCenter />
