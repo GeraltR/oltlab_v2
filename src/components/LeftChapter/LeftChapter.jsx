@@ -4,6 +4,7 @@ import styles from "./LeftChapter.module.css";
 import { InsideChapter } from "../InsideChapter/InsideChapter";
 import { SVGPolishFlag } from "../svgPolishFlag/svgPolishFlag";
 import SvgFranceFlag from "../SvgFranceFlag/SvgFranceFlag";
+import { NavLink } from "react-router-dom";
 
 export function LeftChapter(props) {
   return (
@@ -32,7 +33,9 @@ export function LeftChapter(props) {
         />
         <InsideChapter>
           <ul>
-            <li>hello@oltlab.net</li>
+            <li>
+              <NavLink>hello@oltlab.net</NavLink>
+            </li>
             <li>
               <SvgFranceFlag />
               +33 762 716 212
