@@ -65,7 +65,11 @@ export function LeftChapter(props) {
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
         />
-        <div className={styles.leftChapterBottomLeft}>all rights reserved</div>
+        <div
+          className={`${props.isMobileDevice} ? ${styles.leftChapterBottomLeftMobile} : ${styles.leftChapterBottomLeft}`}
+        >
+          all rights reserved
+        </div>
       </div>
     </>
   );

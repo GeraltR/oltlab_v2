@@ -13,14 +13,16 @@ export function LayoutLeft(props) {
       }`}
     >
       <LeftBar />
-      <MainCenterLayout>
+      <MainCenterLayout isMobileDevice={props.isMobileDevice}>
         <LeftChapter
           chapters={props.chapters}
+          isMobileDevice={props.isMobileDevice}
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
         ></LeftChapter>
       </MainCenterLayout>
       <RightBar
+        isMobileDevice={props.isMobileDevice}
         topText="1"
         bottomText="I"
         bottomTextLeft="all rights reserved"

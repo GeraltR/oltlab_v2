@@ -24,8 +24,8 @@ export function MainPage() {
     width: 0,
     height: 0,
   });
-  const [mainImage, setMainImage] = useState(OLTIMAGE);
-  const [indexMainImage, setIndexMainImage] = useState(2);
+  const [mainImage, setMainImage] = useState();
+  const [indexMainImage, setIndexMainImage] = useState(0);
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [heighDeviceSize, setHeighDeviceSize] = useState(3);
 
@@ -96,8 +96,13 @@ export function MainPage() {
       });
       setIsMobileDevice(window.innerWidth < 1320);
       if (window.innerHeight < 730) setHeighDeviceSize(1);
-      else if (window.innerHeight < 900) setHeighDeviceSize(2);
+      else if (window.innerHeight < 900)
+        if (window.innerWidth < 640) setHeighDeviceSize(2);
+        else setHeighDeviceSize(1);
       else setHeighDeviceSize(3);
+      if (window.innerWidth < 1320 && indexMainImage == 0) {
+        setMainImage(OLTIMAGE);
+      }
     }
     window.addEventListener("resize", handleResize);
     handleResize();

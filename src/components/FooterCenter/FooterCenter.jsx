@@ -13,7 +13,7 @@ export function FooterCenter() {
           <div className={styles.logoInsideLeft}>
             <img src={logo} />
           </div>
-          <div className={styles.logoInsideRight}>| 2024</div>
+          <div className={styles.logoInsideRight}>| 2025</div>
         </div>
       </div>
     </>

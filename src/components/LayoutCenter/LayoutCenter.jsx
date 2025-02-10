@@ -16,7 +16,7 @@ export function LayoutCenter(props) {
       }`}
     >
       <LeftBar />
-      <MainCenterLayout>
+      <MainCenterLayout isMobileDevice={props.isMobileDevice}>
         <TopCenterBar firstText="status:" secondText="work in progress..." />
         <InsideMainLayout>
           <Hero
@@ -29,7 +29,11 @@ export function LayoutCenter(props) {
           <FooterCenter />
         </BottomLogoBar>
       </MainCenterLayout>
-      <RightBar topText="2" bottomText="II" />
+      <RightBar
+        isMobileDevice={props.isMobileDevice}
+        topText="2"
+        bottomText="II"
+      />
     </div>
   );
 }

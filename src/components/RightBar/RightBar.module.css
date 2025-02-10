@@ -18,22 +18,42 @@
 }
 
 .rightBarBottom {
-  position: absolute;
   height: 2.8rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  top: 93dvh;
+  height: 95dvh;
+  margin-top: -0.7rem;
 }
+
+.rightBarBottomMobile {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 95dvh;
+  margin-top: 0.3rem;
+}
+
 .rightBarBottomLeft {
-  position: absolute;
   height: 2.8rem;
   display: flex;
   justify-content: start;
   align-items: end;
   top: 93dvh;
-  left: 8dvw;
   text-align: left;
+}
+
+.rightBarMobile {
+  width: 2%;
+  min-width: 2rem;
+  height: 98dvh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+  padding-bottom: 2rem;
 }
 
 @-moz-document url-prefix() {
@@ -41,6 +61,10 @@
     top: 95.5%;
   }
   .rightBarBottom {
-    top: 95.5%;
+    top: 99%;
+  }
+  .rightBarBottomMobile {
+    height: 2rem;
+    margin-top: -1rem;
   }
 }
