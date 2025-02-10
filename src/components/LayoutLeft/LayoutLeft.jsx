@@ -1,3 +1,4 @@
+import { Hero } from "../Hero/Hero";
 import { LeftBar } from "../LeftBar/LeftBar";
 import { LeftChapter } from "../LeftChapter/LeftChapter";
 import { MainCenterLayout } from "../MainCenterLayout/MainCenterLayout";

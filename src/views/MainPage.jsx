@@ -95,11 +95,11 @@ export function MainPage() {
         height: window.innerHeight,
       });
       setIsMobileDevice(window.innerWidth < 1320);
-      if (window.innerHeight < 730) setHeighDeviceSize(1);
-      else if (window.innerHeight < 900)
-        if (window.innerWidth < 640) setHeighDeviceSize(2);
-        else setHeighDeviceSize(1);
+      if (window.innerHeight <= 730 && window.innerWidth > 640)
+        setHeighDeviceSize(2);
+      else if (window.innerHeight > 900 && window.innerWidth > 640);
       else setHeighDeviceSize(3);
+      if (window.innerWidth < 640) setHeighDeviceSize(1);
       if (window.innerWidth < 1320 && indexMainImage == 0) {
         setMainImage(OLTIMAGE);
       }
