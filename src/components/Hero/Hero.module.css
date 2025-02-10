@@ -4,7 +4,6 @@
   margin: auto;
   padding: 0;
   background-position: center;
-
   background-repeat: no-repeat;
 }
 
@@ -13,7 +12,7 @@
 }
 
 .mainHeroMedium {
-  background-size: 32%;
+  background-size: 60%;
 }
 
 .mainHeroBig {

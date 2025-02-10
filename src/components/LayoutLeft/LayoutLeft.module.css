@@ -8,8 +8,8 @@
   align-items: center;
 }
 
-.layoutMobile {
-  width: 23rem;
+.layoutLeftMobile {
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;

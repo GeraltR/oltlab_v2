@@ -94,7 +94,7 @@ export function MainPage() {
         width: window.innerWidth,
         height: window.innerHeight,
       });
-      setIsMobileDevice(window.innerWidth < 1320 || window.innerHeight < 730);
+      setIsMobileDevice(window.innerWidth < 1320);
       if (window.innerHeight < 730) setHeighDeviceSize(1);
       else if (window.innerHeight < 900) setHeighDeviceSize(2);
       else setHeighDeviceSize(3);
@@ -120,6 +120,7 @@ export function MainPage() {
         heighDeviceSize={heighDeviceSize}
       />
       <LayoutRight
+        isMobileDevice={isMobileDevice}
         chapters={rightChapters}
         onMouseEnter={(e) => handleChapteronMouseEnter(e)}
         onMouseLeave={(e) => handleChapterMoseLeave(e)}

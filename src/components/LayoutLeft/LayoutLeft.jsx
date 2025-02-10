@@ -9,7 +9,7 @@ export function LayoutLeft(props) {
   return (
     <div
       className={`${
-        props.isMobileDevice ? styles.layoutMobile : styles.layoutLeft
+        props.isMobileDevice ? styles.layoutLeftMobile : styles.layoutLeft
       }`}
     >
       <LeftBar />

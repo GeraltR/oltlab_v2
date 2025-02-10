@@ -10,7 +10,11 @@ import { Hero } from "../Hero/Hero";
 
 export function LayoutCenter(props) {
   return (
-    <div className={styles.layoutCenter}>
+    <div
+      className={`${
+        props.isMobileDevice ? styles.layoutCenterMobile : styles.layoutCenter
+      }`}
+    >
       <LeftBar />
       <MainCenterLayout>
         <TopCenterBar firstText="status:" secondText="work in progress..." />

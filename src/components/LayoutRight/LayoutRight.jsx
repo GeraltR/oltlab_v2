@@ -7,7 +7,11 @@ import styles from "./LayoutRight.module.css";
 
 export function LayoutRight(props) {
   return (
-    <div className={styles.layoutRight}>
+    <div
+      className={`${
+        props.isMobileDevice ? styles.layoutRightMobile : styles.layoutRight
+      }`}
+    >
       <LeftBar />
       <MainCenterLayout>
         <RightChapter
