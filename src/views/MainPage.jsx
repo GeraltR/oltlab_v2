@@ -100,9 +100,6 @@ export function MainPage() {
       else if (window.innerHeight > 900 && window.innerWidth > 640);
       else setHeighDeviceSize(3);
       if (window.innerWidth < 640) setHeighDeviceSize(1);
-      if (window.innerWidth < 1320 && indexMainImage == 0) {
-        setMainImage(OLTIMAGE);
-      }
     }
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -113,6 +110,7 @@ export function MainPage() {
     <div
       className={`${isMobileDevice ? styles.mainPageMobile : styles.mainPage}`}
     >
+      {/* {`${isMobileDevice ? "tak" : "nie"}`} */}
       <LayoutLeft
         isMobileDevice={isMobileDevice}
         chapters={leftChapters}

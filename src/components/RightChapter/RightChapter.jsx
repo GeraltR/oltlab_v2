@@ -1,18 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { BottomBar } from "../BottomBar/BottomBar";
 import { InsideChapter } from "../InsideChapter/InsideChapter";
-import { LeftBar } from "../LeftBar/LeftBar";
 import { TopRightBar } from "../TopRightBar/TopRightBar";
 import styles from "./RightChapter.module.css";
 import { TopLeftBar } from "../TopLeftBar/TopLeftBar";
+import { BottomLogoBar } from "../BottomLogoBar/BottomLogoBar";
+import { FooterCenter } from "../FooterCenter/FooterCenter";
 
 export function RightChapter(props) {
   const projects = [
-    { id: 29, key: "a", label: "PL_3D_14/5_2024", link: "" },
-    { id: 28, key: "b", label: "FR_3D_GToBC_2024", link: "" },
-    { id: 27, key: "c", label: "FR_ARCH_POM_2024", link: "" },
-    { id: 26, key: "d", label: "PL_URB_KAT_2024", link: "" },
-    { id: 25, key: "e", label: "FR_ARCH_CONC_2024", link: "" },
+    { id: 29, key: "a", label: " PL_3D_14/5_2024", link: "" },
+    { id: 28, key: "b", label: " FR_3D_GToBC_2024", link: "" },
+    { id: 27, key: "c", label: " FR_ARCH_POM_2024", link: "" },
+    { id: 26, key: "d", label: " PL_URB_KAT_2024", link: "" },
+    { id: 25, key: "e", label: " FR_ARCH_CONC_2024", link: "" },
   ];
 
   const events = [
@@ -112,6 +113,13 @@ export function RightChapter(props) {
         />
         <div className={styles.rightChapterComingSoon}>coming soon...</div>
       </div>
+      {props.isMobileDevice ? (
+        <BottomLogoBar>
+          <FooterCenter />
+        </BottomLogoBar>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

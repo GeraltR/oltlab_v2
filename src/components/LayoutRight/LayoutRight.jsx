@@ -15,16 +15,13 @@ export function LayoutRight(props) {
       <LeftBar isMobileDevice={props.isMobileDevice} />
       <MainCenterLayout isMobileDevice={props.isMobileDevice}>
         <RightChapter
+          isMobileDevice={props.isMobileDevice}
           chapters={props.chapters}
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
         ></RightChapter>
       </MainCenterLayout>
-      <RightBar
-        isMobileDevice={props.isMobileDevice}
-        topText="3"
-        bottomText="III"
-      />
+      <RightBar topText="3" bottomText="III" />
     </div>
   );
 }
