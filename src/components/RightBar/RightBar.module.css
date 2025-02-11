@@ -22,16 +22,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 95dvh;
-  margin-top: -0.7rem;
+  height: 98dvh;
 }
 
 .rightBarBottomMobile {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  height: 95dvh;
-  margin-top: 0.3rem;
+  top: 93dvh;
 }
 
 .rightBarBottomLeft {

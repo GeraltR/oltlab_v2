@@ -1,9 +1,11 @@
 import styles from "./MainCenterLayout.module.css";
 
-export function MainCenterLayout({ children }, props) {
+export function MainCenterLayout({ children, isMobileDevice }) {
   return (
     <div
-      className={`${props.isMobileDevice} ? ${styles.mainCenterLayoutMobile} : ${styles.mainCenterLayout}`}
+      className={`${
+        isMobileDevice ? styles.mainCenterLayoutMobile : styles.mainCenterLayout
+      }`}
     >
       {children}
     </div>

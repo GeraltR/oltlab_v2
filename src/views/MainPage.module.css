@@ -9,7 +9,7 @@
   height: 100vh;
 }
 
-.mainPageMobile {
+.mainPageMobilePortial {
   width: 98dvw;
   display: flex;
   flex-direction: column;
@@ -17,4 +17,14 @@
   margin: 0;
   padding: 0;
   height: 200vh;
+}
+
+.mainPageMobileLandScape {
+  width: 98dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 0;
+  padding: 0;
+  height: 245vh;
 }

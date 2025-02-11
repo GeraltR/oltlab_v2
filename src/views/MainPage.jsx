@@ -27,6 +27,7 @@ export function MainPage() {
   const [mainImage, setMainImage] = useState();
   const [indexMainImage, setIndexMainImage] = useState(0);
   const [isMobileDevice, setIsMobileDevice] = useState(false);
+  const [isLandScape, setIsLandScape] = useState(true);
   const [heighDeviceSize, setHeighDeviceSize] = useState(3);
 
   const leftChapters = [
@@ -94,6 +95,7 @@ export function MainPage() {
         width: window.innerWidth,
         height: window.innerHeight,
       });
+      setIsLandScape(window.innerWidth >= window.innerHeight);
       setIsMobileDevice(window.innerWidth < 1320);
       if (window.innerHeight <= 730 && window.innerWidth > 640)
         setHeighDeviceSize(2);
@@ -108,7 +110,13 @@ export function MainPage() {
 
   return (
     <div
-      className={`${isMobileDevice ? styles.mainPageMobile : styles.mainPage}`}
+      className={`${
+        isMobileDevice
+          ? isLandScape
+            ? styles.mainPageMobileLandScape
+            : styles.mainPageMobilePortial
+          : styles.mainPage
+      }`}
     >
       {/* {`${isMobileDevice ? "tak" : "nie"}`} */}
       <LayoutLeft
@@ -124,6 +132,7 @@ export function MainPage() {
       />
       <LayoutRight
         isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
         chapters={rightChapters}
         onMouseEnter={(e) => handleChapteronMouseEnter(e)}
         onMouseLeave={(e) => handleChapterMoseLeave(e)}

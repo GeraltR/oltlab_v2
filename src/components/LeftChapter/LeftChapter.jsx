@@ -16,11 +16,7 @@ export function LeftChapter(props) {
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
         />
-        <InsideChapter>
-          <BottomBar>
-            <p>contact</p>
-          </BottomBar>
-        </InsideChapter>
+        <InsideChapter></InsideChapter>
       </div>
       <div className={styles.leftChapter}>
         <TopLeftBar
@@ -32,6 +28,7 @@ export function LeftChapter(props) {
           onMouseLeave={props.onMouseLeave}
         />
         <InsideChapter>
+          <p>contact</p>
           <ul>
             <li>
               <NavLink>hello@oltlab.net</NavLink>
@@ -65,11 +62,6 @@ export function LeftChapter(props) {
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
         />
-        <div
-          className={`${props.isMobileDevice} ? ${styles.leftChapterBottomLeftMobile} : ${styles.leftChapterBottomLeft}`}
-        >
-          all rights reserved
-        </div>
       </div>
     </>
   );

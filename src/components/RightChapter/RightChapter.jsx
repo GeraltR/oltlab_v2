@@ -25,15 +25,33 @@ export function RightChapter(props) {
 
   return (
     <>
-      <div className={styles.rightChapterWithTopMargin}>
+      <div
+        className={`${
+          props.isMobileDevice && props.isLandScape
+            ? styles.rightChapterWithTopMarginLandScape
+            : styles.rightChapterWithTopMargin
+        }`}
+      >
         <TopLeftBar firstText={props.chapters[0].label} />
-        <InsideChapter>
-          <BottomBar>
-            <p>recent</p>
+        <InsideChapter
+          isMobileDevice={props.isMobileDevice}
+          isLandScape={props.isLandScape}
+        >
+          <BottomBar
+            isMobileDevice={props.isMobileDevice}
+            isLandScape={props.isLandScape}
+          >
+            recent
           </BottomBar>
         </InsideChapter>
       </div>
-      <div className={styles.rightChapter}>
+      <div
+        className={`${
+          props.isMobileDevice && props.isLandScape
+            ? styles.rightChapterMObileLandscape
+            : styles.rightChapter
+        }`}
+      >
         <TopRightBar
           firstText={props.chapters[1].label}
           marginLeft="1.5rem"
@@ -41,7 +59,10 @@ export function RightChapter(props) {
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
         />
-        <InsideChapter>
+        <InsideChapter
+          isMobileDevice={props.isMobileDevice}
+          isLandScape={props.isLandScape}
+        >
           <ul>
             {projects.map((project) => {
               return (
@@ -77,7 +98,10 @@ export function RightChapter(props) {
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
         />
-        <InsideChapter>
+        <InsideChapter
+          isMobileDevice={props.isMobileDevice}
+          isLandScape={props.isLandScape}
+        >
           <ul>
             {events.map((oltevent) => {
               return (

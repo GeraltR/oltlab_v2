@@ -12,16 +12,21 @@ export function LayoutRight(props) {
         props.isMobileDevice ? styles.layoutRightMobile : styles.layoutRight
       }`}
     >
-      <LeftBar isMobileDevice={props.isMobileDevice} />
+      <LeftBar />
       <MainCenterLayout isMobileDevice={props.isMobileDevice}>
         <RightChapter
           isMobileDevice={props.isMobileDevice}
+          isLandScape={props.isLandScape}
           chapters={props.chapters}
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
-        ></RightChapter>
+        />
       </MainCenterLayout>
-      <RightBar topText="3" bottomText="III" />
+      <RightBar
+        isMobileDevice={props.isMobileDevice}
+        topText="3"
+        bottomText="III"
+      />
     </div>
   );
 }
