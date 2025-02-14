@@ -16,6 +16,7 @@ import STERCHING from "../assets/img/mainprojects.png";
 import BELGRADE from "../assets/img/mainbelgrade.png";
 import ADRIANZERT from "../assets/img/mainadrianzert.png";
 import M14BY5 from "../assets/img/main14by5.png";
+import { OltLabGalery29 } from "./OltLabGalery29";
 
 let activeName = "";
 
@@ -29,12 +30,25 @@ export function MainPage() {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [isLandScape, setIsLandScape] = useState(true);
   const [heighDeviceSize, setHeighDeviceSize] = useState(3);
+  const [galeryVisibled, setGaleryVisibled] = useState(false);
 
   const leftChapters = [
-    { id: 1, key: "", label: "olt|tlo website", rightlabels: [{}] },
-    { id: 2, key: "a", label: "olt.lab", rightlabels: [{}] },
-    { id: 3, key: "b", label: "tlo.gallery" },
-    { id: 4, key: "c", label: "enojy" },
+    {
+      id: 1,
+      key: "",
+      label: "olt|tlo website",
+      rightlabels: [{}],
+      linkTo: "/",
+    },
+    { id: 2, key: "a", label: "olt.lab", rightlabels: [{}], linkTo: "/oltlab" },
+    {
+      id: 3,
+      key: "b",
+      label: "tlo.gallery",
+      rightlabels: [{}],
+      linkTo: "/tlogalery",
+    },
+    { id: 4, key: "c", label: "enojy", rightlabels: [{}], linkTo: "/enojy" },
   ];
 
   const rightChapters = [
@@ -57,6 +71,12 @@ export function MainPage() {
   const handleChapterMoseLeave = (event) => {
     activeName = "";
     setIndexMainImage(0);
+  };
+
+  const handleChapterOnClik = (event) => {
+    console.log(event.target.id);
+    console.log(galeryVisibled);
+    setGaleryVisibled(!galeryVisibled);
   };
 
   useEffect(() => {
@@ -87,7 +107,7 @@ export function MainPage() {
     } else if (indexMainImage == 29) {
       setMainImage(PL_3D_145_2024);
     }
-  }, [indexMainImage]);
+  }, [indexMainImage, galeryVisibled]);
 
   useEffect(() => {
     function handleResize() {
@@ -136,6 +156,13 @@ export function MainPage() {
         chapters={rightChapters}
         onMouseEnter={(e) => handleChapteronMouseEnter(e)}
         onMouseLeave={(e) => handleChapterMoseLeave(e)}
+        onClick={(e) => handleChapterOnClik(e)}
+      />
+      <OltLabGalery29
+        visible={galeryVisibled}
+        isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
+        onClick={(e) => handleChapterOnClik(e)}
       />
     </div>
   );

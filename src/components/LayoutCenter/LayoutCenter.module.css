@@ -1,4 +1,5 @@
 .layoutCenter {
+  z-index: 0;
   width: 29rem;
   margin: 0;
   padding: 0;
@@ -9,5 +10,6 @@
 }
 
 .layoutCenterMobile {
+  z-index: 0;
   display: none;
 }

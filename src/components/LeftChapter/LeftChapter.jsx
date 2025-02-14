@@ -1,5 +1,4 @@
 import { TopLeftBar } from "../TopLeftBar/TopLeftBar";
-import { BottomBar } from "../BottomBar/BottomBar";
 import styles from "./LeftChapter.module.css";
 import { InsideChapter } from "../InsideChapter/InsideChapter";
 import { SVGPolishFlag } from "../svgPolishFlag/svgPolishFlag";

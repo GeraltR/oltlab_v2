@@ -72,6 +72,7 @@ export function RightChapter(props) {
                   id={`project${project.id}Chapter`}
                   onMouseEnter={props.onMouseEnter}
                   onMouseLeave={props.onMouseLeave}
+                  onClick={props.onClick}
                 >
                   {project.id}
                   <NavLink
@@ -81,6 +82,7 @@ export function RightChapter(props) {
                     id={`project${project.id}Chapter`}
                     onMouseEnter={props.onMouseEnter}
                     onMouseLeave={props.onMouseLeave}
+                    onClick={props.onClick}
                   >
                     {project.label}
                   </NavLink>
@@ -111,6 +113,7 @@ export function RightChapter(props) {
                   id={`project${oltevent.id}Chapter`}
                   onMouseEnter={props.onMouseEnter}
                   onMouseLeave={props.onMouseLeave}
+                  onClick={props.onClick}
                 >
                   <NavLink
                     className={styles.rightOltEventLink}
@@ -118,6 +121,7 @@ export function RightChapter(props) {
                     id={`project${oltevent.id}Chapter`}
                     onMouseEnter={props.onMouseEnter}
                     onMouseLeave={props.onMouseLeave}
+                    onClick={props.onClick}
                   >
                     {oltevent.label}
                   </NavLink>
