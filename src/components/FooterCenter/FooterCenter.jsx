@@ -1,5 +1,5 @@
 import styles from "./FooterCenter.module.css";
-import logo from "../../assets/img/logooltlab.png";
+import logo from "../../img/logooltlab.png";
 
 export function FooterCenter() {
   return (

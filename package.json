@@ -34,6 +34,6 @@
   "description": "<p align=\"center\"> <a href=\"https://www.oltlab.net\"><img src=\"https://www.oltlab.net/logo.png\" alt=\"OltLab\" style=\"width:200px;\" ></a> </p>",
   "main": "postcss.config.js",
   "keywords": [],
-  "author": "",
+  "author": "Pawel Metelski",
   "license": "ISC"
 }

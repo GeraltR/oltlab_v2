@@ -1,22 +1,10 @@
+import { useEffect, useState } from "react";
+import styles from "./MainPage.module.css";
 import { LayoutCenter } from "../components/LayoutCenter/LayoutCenter";
 import { LayoutLeft } from "../components/LayoutLeft/LayoutLeft";
 import { LayoutRight } from "../components/LayoutRight/LayoutRight";
-import styles from "./MainPage.module.css";
-import { useEffect, useState } from "react";
-
-import OLTIMAGE from "../assets/img/mainoltlab.png";
-import TLOIMAGE from "../assets/img/maintlo.png";
-import ENOJYIMAGE from "../assets/img/mainenojy.png";
-import PL_3D_145_2024 from "../assets/img/mainpl_3d_145_2024.png";
-import FR_3D_GTOBC_2024 from "../assets/img/mainfr_3d_gtobc_2024.png";
-import FR_ARCG_POM_2024 from "../assets/img/mainfr_arch_pom_2024.png";
-import PL_URB_KAT_2024 from "../assets/img/mainpl_urb_kat_2024.png";
-import FR_ARCH_CONC_2024 from "../assets/img/mainfr_arch_conc_2024.png";
-import STERCHING from "../assets/img/mainprojects.png";
-import BELGRADE from "../assets/img/mainbelgrade.png";
-import ADRIANZERT from "../assets/img/mainadrianzert.png";
-import M14BY5 from "../assets/img/main14by5.png";
 import { OltLabGalery29 } from "./OltLabGalery29";
+import { MAIN_IMAGE } from "../constans/images";
 
 let activeName = "";
 
@@ -25,8 +13,10 @@ export function MainPage() {
     width: 0,
     height: 0,
   });
-  const [mainImage, setMainImage] = useState();
-  const [indexMainImage, setIndexMainImage] = useState(0);
+  const [mainImage, setMainImage] = useState({
+    name: "",
+    path: "",
+  });
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [isLandScape, setIsLandScape] = useState(true);
   const [heighDeviceSize, setHeighDeviceSize] = useState(3);
@@ -61,16 +51,20 @@ export function MainPage() {
   const handleChapteronMouseEnter = (event) => {
     if (event.target.id != activeName) {
       activeName = event.target.id;
-      const index = String(
-        activeName.replace("project", "").replace("Chapter", "")
+      setMainImage(
+        MAIN_IMAGE.find((image) => {
+          return image.name === activeName;
+        })
       );
-      setIndexMainImage(index);
     }
   };
 
-  const handleChapterMoseLeave = (event) => {
+  const handleChapterMoseLeave = () => {
     activeName = "";
-    setIndexMainImage(0);
+    setMainImage({
+      name: "",
+      path: "",
+    });
   };
 
   const handleChapterOnClik = (event) => {
@@ -79,35 +73,7 @@ export function MainPage() {
     setGaleryVisibled(!galeryVisibled);
   };
 
-  useEffect(() => {
-    if (indexMainImage == 0) {
-      setMainImage();
-    } else if (indexMainImage == 2) {
-      setMainImage(OLTIMAGE);
-    } else if (indexMainImage == 3) {
-      setMainImage(TLOIMAGE);
-    } else if (indexMainImage == 4) {
-      setMainImage(ENOJYIMAGE);
-    } else if (indexMainImage == 21) {
-      setMainImage(M14BY5);
-    } else if (indexMainImage == 22) {
-      setMainImage(ADRIANZERT);
-    } else if (indexMainImage == 23) {
-      setMainImage(BELGRADE);
-    } else if (indexMainImage == 24) {
-      setMainImage(STERCHING);
-    } else if (indexMainImage == 25) {
-      setMainImage(FR_ARCH_CONC_2024);
-    } else if (indexMainImage == 26) {
-      setMainImage(PL_URB_KAT_2024);
-    } else if (indexMainImage == 27) {
-      setMainImage(FR_ARCG_POM_2024);
-    } else if (indexMainImage == 28) {
-      setMainImage(FR_3D_GTOBC_2024);
-    } else if (indexMainImage == 29) {
-      setMainImage(PL_3D_145_2024);
-    }
-  }, [indexMainImage, galeryVisibled]);
+  useEffect(() => {}, [galeryVisibled, mainImage]);
 
   useEffect(() => {
     function handleResize() {
@@ -147,7 +113,8 @@ export function MainPage() {
       />
       <LayoutCenter
         isMobileDevice={isMobileDevice}
-        heroImage={mainImage}
+        heroImage={mainImage.path}
+        heroHidden={mainImage.path == ""}
         heighDeviceSize={heighDeviceSize}
       />
       <LayoutRight

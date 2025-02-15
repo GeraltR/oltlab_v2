@@ -23,6 +23,7 @@ export function LayoutCenter(props) {
             isMobileDevice={props.isMobileDevice}
             heighDeviceSize={props.heighDeviceSize}
             heroImage={props.heroImage}
+            heroHidden={props.heroHidden}
           />
         </InsideMainLayout>
         <BottomLogoBar>

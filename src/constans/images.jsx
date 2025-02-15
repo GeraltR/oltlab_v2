@@ -1,0 +1,16 @@
+export const MAIN_IMAGE = [
+  { name: "project0Chapter", path: "" },
+  { name: "project1Chapter", path: "" },
+  { name: "project2Chapter", path: "/img/mainoltlab.png" },
+  { name: "project3Chapter", path: "/img/maintlo.png" },
+  { name: "project4Chapter", path: "/img/mainenojy.png" },
+  { name: "project29Chapter", path: "/img/mainpl_3d_145_2024.png" },
+  { name: "project28Chapter", path: "/img/mainfr_3d_gtobc_2024.png" },
+  { name: "project27Chapter", path: "/img/mainfr_arch_pom_2024.png" },
+  { name: "project26Chapter", path: "/img/mainpl_urb_kat_2024.png" },
+  { name: "project25Chapter", path: "/img/mainfr_arch_conc_2024.png" },
+  { name: "project24Chapter", path: "/img/mainprojects.png" },
+  { name: "project23Chapter", path: "/img/mainbelgrade.png" },
+  { name: "project22Chapter", path: "/img/mainadrianzert.png" },
+  { name: "project21Chapter", path: "/img/main14by5.png" },
+];

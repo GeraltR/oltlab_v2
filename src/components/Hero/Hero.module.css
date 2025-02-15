@@ -3,18 +3,55 @@
   height: 100%;
   margin: auto;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.mainHero img {
+  margin: auto;
+  padding: auto;
+}
+
+.mainHeroShowing {
+  animation: 2s ease-in-out 0s normal forwards 1 fadein;
+}
+
+.mainHeroHidden {
+  animation: 2s ease-in-out 0s normal forwards 1 fadeout;
+}
+
 .mainHeroSmall {
-  background-size: 32%;
+  width: 32%;
+  height: auto;
 }
 
 .mainHeroMedium {
-  background-size: 38%;
+  width: 38%;
+  height: auto;
 }
 
 .mainHeroBig {
-  background-size: 56%;
+  width: 56%;
+  height: auto;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
