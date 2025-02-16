@@ -65,9 +65,7 @@ export function MainPage() {
     setIsVisibledImage(false);
   };
 
-  const handleChapterOnClik = (event) => {
-    console.log(event.target.id);
-    console.log(galeryVisibled);
+  const handleChapterOnClik = () => {
     setGaleryVisibled(!galeryVisibled);
   };
 

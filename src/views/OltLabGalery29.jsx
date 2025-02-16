@@ -7,8 +7,11 @@ export function OltLabGalery29(props) {
         props.isMobileDevice && !props.isLandScape
           ? styles.oltLabGalery29Mobile
           : styles.oltLabGalery29
+      } ${
+        props.visible
+          ? styles.oltLabGalery29Showing
+          : styles.oltLabGalery29Hidden
       }`}
-      style={{ display: `${props.visible ? "block" : "none"}` }}
       onClick={props.onClick}
     >
       <div
