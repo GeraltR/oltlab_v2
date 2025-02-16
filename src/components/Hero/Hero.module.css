@@ -16,11 +16,15 @@
 }
 
 .mainHeroShowing {
-  animation: 2s ease-in-out 0s normal forwards 1 fadein;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 
 .mainHeroHidden {
-  animation: 2s ease-in-out 0s normal forwards 1 fadeout;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
 }
 
 .mainHeroSmall {
@@ -36,22 +40,4 @@
 .mainHeroBig {
   width: 56%;
   height: auto;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }

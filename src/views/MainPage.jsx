@@ -17,6 +17,7 @@ export function MainPage() {
     name: "",
     path: "",
   });
+  const [isVisibledImage, setIsVisibledImage] = useState(false);
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [isLandScape, setIsLandScape] = useState(true);
   const [heighDeviceSize, setHeighDeviceSize] = useState(3);
@@ -51,20 +52,17 @@ export function MainPage() {
   const handleChapteronMouseEnter = (event) => {
     if (event.target.id != activeName) {
       activeName = event.target.id;
-      setMainImage(
-        MAIN_IMAGE.find((image) => {
-          return image.name === activeName;
-        })
-      );
+      const actualiImage = MAIN_IMAGE.find((image) => {
+        return image.name === activeName;
+      });
+      if (actualiImage.path != "") setMainImage(actualiImage);
+      setIsVisibledImage(actualiImage.path != "");
     }
   };
 
   const handleChapterMoseLeave = () => {
     activeName = "";
-    setMainImage({
-      name: "",
-      path: "",
-    });
+    setIsVisibledImage(false);
   };
 
   const handleChapterOnClik = (event) => {
@@ -72,8 +70,6 @@ export function MainPage() {
     console.log(galeryVisibled);
     setGaleryVisibled(!galeryVisibled);
   };
-
-  useEffect(() => {}, [galeryVisibled, mainImage]);
 
   useEffect(() => {
     function handleResize() {
@@ -114,7 +110,7 @@ export function MainPage() {
       <LayoutCenter
         isMobileDevice={isMobileDevice}
         heroImage={mainImage.path}
-        heroHidden={mainImage.path == ""}
+        heroHidden={!isVisibledImage}
         heighDeviceSize={heighDeviceSize}
       />
       <LayoutRight

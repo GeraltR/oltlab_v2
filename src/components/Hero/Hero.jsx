@@ -2,7 +2,11 @@ import styles from "./Hero.module.css";
 
 export function Hero(props) {
   return (
-    <div className={`${styles.mainHero}`}>
+    <div
+      className={`${styles.mainHero} ${
+        props.heroHidden ? styles.mainHeroHidden : styles.mainHeroShowing
+      }`}
+    >
       <img
         className={`${styles.mainHero} ${
           props.heighDeviceSize == 3
@@ -10,12 +14,8 @@ export function Hero(props) {
             : props.heighDeviceSize == 2
             ? styles.mainHeroMedium
             : styles.mainHeroSmall
-        }  ${
-          props.heroHidden ? styles.mainHeroHidden : styles.mainHeroShowing
         }`}
-        src={`${import.meta.env.VITE_BASE_URL}${
-          props.heroHidden ? "/img/mainblack.png" : props.heroImage
-        }`}
+        src={`${import.meta.env.VITE_BASE_URL}${props.heroImage}`}
       ></img>
     </div>
   );

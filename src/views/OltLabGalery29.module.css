@@ -12,6 +12,18 @@
   align-items: center;
 }
 
+.oltLabGalery29Showing {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.oltLabGalery29Hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
 .oltLabGalery29Mobile {
   z-index: 10;
   position: absolute;
