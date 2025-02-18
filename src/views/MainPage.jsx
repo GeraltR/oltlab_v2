@@ -3,8 +3,10 @@ import styles from "./MainPage.module.css";
 import { LayoutCenter } from "../components/LayoutCenter/LayoutCenter";
 import { LayoutLeft } from "../components/LayoutLeft/LayoutLeft";
 import { LayoutRight } from "../components/LayoutRight/LayoutRight";
-import { OltLabGalery29 } from "./OltLabGalery29";
 import { MAIN_IMAGE } from "../constans/images";
+import { OltLabGalery29 } from "./OltLabGalery29";
+import { OltLabGalery28 } from "./OltLabGalery28";
+import { OltLabGalery24 } from "./OltLabGalery24";
 
 let activeName = "";
 
@@ -21,7 +23,8 @@ export function MainPage() {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [isLandScape, setIsLandScape] = useState(true);
   const [heighDeviceSize, setHeighDeviceSize] = useState(3);
-  const [galeryVisibled, setGaleryVisibled] = useState(false);
+  const [galeryVisibled, setGaleryVisibled] = useState(0);
+  const [stayMainImage, setStayMainImage] = useState(false);
 
   const leftChapters = [
     {
@@ -62,11 +65,15 @@ export function MainPage() {
 
   const handleChapterMoseLeave = () => {
     activeName = "";
-    setIsVisibledImage(false);
+    setIsVisibledImage(stayMainImage);
   };
 
-  const handleChapterOnClik = () => {
-    setGaleryVisibled(!galeryVisibled);
+  const handleChapterOnClik = (event) => {
+    let galeryNumber = event.target.id;
+    galeryNumber = galeryNumber.replace("project", "").replace("Chapter", "");
+    setGaleryVisibled(galeryNumber);
+    setStayMainImage(galeryNumber.length > 0);
+    setIsVisibledImage(galeryNumber.length > 0);
   };
 
   useEffect(() => {
@@ -122,7 +129,19 @@ export function MainPage() {
         onClick={(e) => handleChapterOnClik(e)}
       />
       <OltLabGalery29
-        visible={galeryVisibled}
+        visible={galeryVisibled == 29}
+        isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
+        onClick={(e) => handleChapterOnClik(e)}
+      />
+      <OltLabGalery28
+        visible={galeryVisibled == 28}
+        isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
+        onClick={(e) => handleChapterOnClik(e)}
+      />
+      <OltLabGalery24
+        visible={galeryVisibled == 24}
         isMobileDevice={isMobileDevice}
         isLandScape={isLandScape}
         onClick={(e) => handleChapterOnClik(e)}

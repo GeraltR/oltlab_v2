@@ -5,6 +5,7 @@ import "./index.css";
 import "./styles/theme.css";
 import "./styles/globals.css";
 import { MainPage } from "./views/MainPage.jsx";
+import { Helmet } from "react-helmet";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,12 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </StrictMode>
+  <>
+    <Helmet>
+      <title>Oltlab</title>
+    </Helmet>
+    <StrictMode>
+      <RouterProvider router={router}></RouterProvider>
+    </StrictMode>
+  </>
 );

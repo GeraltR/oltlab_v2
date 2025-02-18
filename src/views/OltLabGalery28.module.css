@@ -1,0 +1,162 @@
+.oltLabGalery28 {
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  max-height: 700px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.oltLabGalery28Main {
+  display: none;
+}
+
+.oltLabGalery28Showing {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.oltLabGalery28Hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.oltLabGalery28Mobile {
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1440px;
+  max-height: 900px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.oltLabGalery28ImgMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oltLabGalery28ImgMain img {
+  position: relative;
+  max-width: 235px;
+  max-height: 292px;
+}
+.oltLabGalery28ImgMainMobile img {
+  display: none;
+}
+.oltLabGalery28Img_1 {
+  position: absolute;
+  max-width: 390px;
+  max-height: 223px;
+  left: 4%;
+  top: 0%;
+}
+
+.oltLabGalery28Img_1Mobile {
+  position: absolute;
+  max-width: 390px;
+  max-height: 223px;
+  left: 4%;
+  top: 0%;
+}
+
+.oltLabGalery28Img_2 {
+  position: absolute;
+  max-width: 238px;
+  max-height: 187;
+  width: 40%;
+  left: 6%;
+  top: 50%;
+}
+
+.oltLabGalery28Img_2Mobile {
+  z-index: 9;
+  position: absolute;
+  max-width: 341px;
+  max-height: 268px;
+  left: 20%;
+  top: 45%;
+}
+
+.oltLabGalery28Img_3 {
+  position: absolute;
+  max-width: 233px;
+  max-height: 187px;
+  left: 48%;
+  top: 2%;
+}
+.oltLabGalery28Img_3Mobile {
+  z-index: 7;
+  position: absolute;
+  max-width: 204px;
+  max-height: 164px;
+  left: 43%;
+  top: 2%;
+}
+
+.oltLabGalery28Img_4 {
+  position: absolute;
+  max-width: 226px;
+  max-height: 371px;
+  left: 74%;
+  top: 15%;
+}
+
+.oltLabGalery28Img_4Mobile {
+  z-index: 8;
+  position: absolute;
+  max-width: 226px;
+  max-height: 371px;
+  left: 1%;
+  top: 15%;
+}
+
+.oltLabGalery28Img_5 {
+  position: relative;
+  max-width: 96px;
+  max-height: 43px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 3%;
+}
+
+.oltLabGalery28Img_5Mobile {
+  position: absolute;
+  max-width: 312px;
+  max-height: 220px;
+  left: 45%;
+  top: 23%;
+  background-color: transparent;
+}
+
+.oltLabGalery28Img_6 {
+  position: absolute;
+  max-width: 85px;
+  max-height: 28px;
+  left: 78%;
+  top: 80%;
+}
+
+.oltLabGalery28Img_6Mobile {
+  z-index: 11;
+  position: absolute;
+  max-width: 85px;
+  max-height: 28px;
+  left: 28%;
+  top: 68%;
+  background-color: transparent;
+}

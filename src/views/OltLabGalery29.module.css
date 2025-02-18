@@ -10,6 +10,7 @@
   display: flex;
   justify-items: center;
   align-items: center;
+  background-color: transparent;
 }
 
 .oltLabGalery29Showing {
@@ -54,105 +55,63 @@
 }
 .oltLabGalery29Img_1 {
   position: absolute;
-  max-width: 280px;
-  max-height: 186px;
-  left: 20%;
-  top: 5%;
+  max-width: 336px;
+  max-height: 234px;
+  left: 30px;
+  top: 4%;
 }
 
 .oltLabGalery29Img_1Mobile {
   position: absolute;
-  max-width: 280px;
-  max-height: 186px;
-  left: 55%;
+  max-width: 336px;
+  max-height: 234px;
+  left: 17%;
   top: 0%;
 }
 
 .oltLabGalery29Img_2 {
   position: absolute;
-  max-width: 264px;
-  max-height: 398px;
-  left: 2%;
-  top: 30%;
+  max-width: 280px;
+  max-height: 186px;
+  left: 0%;
+  top: 60%;
 }
 
 .oltLabGalery29Img_2Mobile {
   position: absolute;
-  max-width: 100%;
-  left: 0%;
-  top: 20%;
+  max-width: 70%;
+  left: 28%;
+  top: 60%;
 }
 
 .oltLabGalery29Img_3 {
   position: absolute;
-  max-width: 156px;
-  max-height: 235px;
-  left: 25%;
-  top: 70%;
+  max-width: 274px;
+  max-height: 384px;
+  left: 75%;
+  top: 4%;
 }
 .oltLabGalery29Img_3Mobile {
-  display: none;
+  z-index: 11;
+  position: absolute;
+  max-width: 274px;
+  max-height: 384px;
+  left: 0%;
+  top: 6%;
 }
 
 .oltLabGalery29Img_4 {
   position: absolute;
-  max-width: 208px;
-  max-height: 314px;
-  left: 64%;
-  top: 5%;
+  max-width: 233px;
+  max-height: 170px;
+  left: 78%;
+  top: 70%;
 }
 
 .oltLabGalery29Img_4Mobile {
   position: absolute;
   max-width: 208px;
   max-height: 314px;
-  left: 0%;
-  top: 0%;
-}
-
-.oltLabGalery29Img_5 {
-  position: absolute;
-  max-width: 148px;
-  max-height: 222px;
-  left: 70%;
-  top: 44%;
-}
-
-.oltLabGalery29Img_5Mobile {
-  position: absolute;
-  max-width: 148px;
-  max-height: 222px;
-  left: 5%;
-  top: 38%;
-}
-
-.oltLabGalery29Img_6 {
-  position: absolute;
-  max-width: 148px;
-  max-height: 222px;
-  left: 82%;
-  top: 44%;
-}
-.oltLabGalery29Img_6Mobile {
-  position: absolute;
-  max-width: 148px;
-  max-height: 222px;
-  left: 52%;
-  top: 38%;
-}
-
-.oltLabGalery29Img_7 {
-  position: absolute;
-  max-width: 372px;
-  max-height: 223px;
-  left: 67%;
-  top: 74%;
-}
-
-.oltLabGalery29Img_7Mobile {
-  position: absolute;
-  max-width: 372px;
-  max-height: 223px;
-  left: 5%;
-  top: 65%;
+  left: 12%;
+  top: 46%;
 }
