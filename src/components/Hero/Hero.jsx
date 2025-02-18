@@ -16,6 +16,7 @@ export function Hero(props) {
             : styles.mainHeroSmall
         }`}
         src={`${import.meta.env.VITE_BASE_URL}${props.heroImage}`}
+        style={{ width: `${props.heroWidth}`, height: `${props.heroHeight}` }}
       ></img>
     </div>
   );

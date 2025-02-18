@@ -23,6 +23,8 @@ export function LayoutCenter(props) {
             isMobileDevice={props.isMobileDevice}
             heighDeviceSize={props.heighDeviceSize}
             heroImage={props.heroImage}
+            heroWidth={props.heroWidth}
+            heroHeight={props.heroHeight}
             heroHidden={props.heroHidden}
           />
         </InsideMainLayout>

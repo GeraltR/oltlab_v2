@@ -108,6 +108,8 @@ export function MainPage() {
       <LayoutCenter
         isMobileDevice={isMobileDevice}
         heroImage={mainImage.path}
+        heroWidth={mainImage.width}
+        heroHeight={mainImage.heigh}
         heroHidden={!isVisibledImage}
         heighDeviceSize={heighDeviceSize}
       />
