@@ -22,8 +22,8 @@ export const MAIN_IMAGE = [
   {
     name: "project29Chapter",
     path: "/img/mainpl_3d_145_2024.png",
-    width: "353px",
-    height: "191px",
+    width: "247px",
+    height: "134px",
   },
   {
     name: "project28Chapter",
