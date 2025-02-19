@@ -6,6 +6,7 @@ import { LayoutRight } from "../components/LayoutRight/LayoutRight";
 import { MAIN_IMAGE } from "../constans/images";
 import { OltLabGalery29 } from "./OltLabGalery29";
 import { OltLabGalery28 } from "./OltLabGalery28";
+import { OltLabGalery27 } from "./OltLabGalery27";
 import { OltLabGalery24 } from "./OltLabGalery24";
 
 let activeName = "";
@@ -136,6 +137,12 @@ export function MainPage() {
       />
       <OltLabGalery28
         visible={galeryVisibled == 28}
+        isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
+        onClick={(e) => handleChapterOnClik(e)}
+      />
+      <OltLabGalery27
+        visible={galeryVisibled == 27}
         isMobileDevice={isMobileDevice}
         isLandScape={isLandScape}
         onClick={(e) => handleChapterOnClik(e)}

@@ -1,0 +1,176 @@
+.oltLabGalery27 {
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.oltLabGalery27Main {
+  display: none;
+}
+
+.oltLabGalery27Showing {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.oltLabGalery27Hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.oltLabGalery27Mobile {
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1440px;
+  max-height: 900px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.oltLabGalery27ImgMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.oltLabGalery27ImgMain img {
+  position: relative;
+  max-width: 235px;
+  max-height: 292px;
+}
+.oltLabGalery27ImgMainMobile img {
+  display: none;
+}
+.oltLabGalery27Img_1 {
+  position: absolute;
+  max-width: 345px;
+  max-height: 230px;
+  left: 4%;
+  top: 2%;
+}
+
+.oltLabGalery27Img_1Mobile {
+  z-index: 2;
+  position: absolute;
+  max-width: 345px;
+  max-height: 230px;
+  left: 8%;
+  top: 0%;
+}
+
+.oltLabGalery27Img_2 {
+  position: absolute;
+  max-width: 230px;
+  max-height: 157px;
+  width: 40%;
+  left: 4%;
+  top: 40%;
+}
+
+.oltLabGalery27Img_2Mobile {
+  z-index: 1;
+  position: absolute;
+  max-width: 230px;
+  max-height: 157px;
+  left: 30%;
+  top: 30%;
+}
+
+.oltLabGalery27Img_3 {
+  position: absolute;
+  max-width: 345px;
+  max-height: 229px;
+  left: 4%;
+  top: 67%;
+}
+.oltLabGalery27Img_3Mobile {
+  z-index: 10;
+  position: absolute;
+  max-width: 345px;
+  max-height: 229px;
+  left: 23%;
+  top: 52%;
+}
+
+.oltLabGalery27Img_4 {
+  position: absolute;
+  max-width: 341px;
+  max-height: 227px;
+  left: 74%;
+  top: 2%;
+}
+
+.oltLabGalery27Img_4Mobile {
+  z-index: 9;
+  position: absolute;
+  max-width: 341px;
+  max-height: 227px;
+  left: -5%;
+  top: 0.3%;
+}
+
+.oltLabGalery27Img_5 {
+  position: absolute;
+  max-width: 240px;
+  max-height: 160px;
+  left: 71.3%;
+  top: 76%;
+}
+
+.oltLabGalery27Img_5Mobile {
+  z-index: 10;
+  position: absolute;
+  max-width: 240px;
+  max-height: 160px;
+  left: -10%;
+  top: 63%;
+  background-color: transparent;
+}
+
+.oltLabGalery27Img_6 {
+  position: absolute;
+  max-width: 113px;
+  max-height: 159px;
+  left: 89%;
+  top: 76%;
+}
+
+.oltLabGalery27Img_6Mobile {
+  z-index: 10;
+  position: absolute;
+  max-width: 113px;
+  max-height: 159px;
+  left: 63%;
+  top: 63%;
+  background-color: transparent;
+}
+
+.oltLabGalery27Img_7 {
+  display: none;
+}
+
+.oltLabGalery27Img_7Mobile {
+  z-index: 3;
+  position: absolute;
+  max-width: 188px;
+  max-height: 237px;
+  left: 28%;
+  top: 26%;
+  background-color: transparent;
+}
