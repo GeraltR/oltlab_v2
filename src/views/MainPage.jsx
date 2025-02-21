@@ -122,21 +122,26 @@ export function MainPage() {
       <LayoutLeft
         isMobileDevice={isMobileDevice}
         chapters={leftChapters}
+        isBlur={galeryVisibled != ""}
         onMouseEnter={(e) => handleChapteronMouseEnter(e)}
         onMouseLeave={(e) => handleChapterMoseLeave(e)}
       />
       <LayoutCenter
         isMobileDevice={isMobileDevice}
+        isTitleGalery={galeryVisibled != ""}
+        nameOfProject={mainImage.nameOfProject}
         heroImage={mainImage.path}
         heroWidth={mainImage.width}
         heroHeight={mainImage.heigh}
         heroHidden={!isVisibledImage}
         heighDeviceSize={heighDeviceSize}
+        isBlur={galeryVisibled != ""}
       />
       <LayoutRight
         isMobileDevice={isMobileDevice}
         isLandScape={isLandScape}
         chapters={rightChapters}
+        isBlur={galeryVisibled != ""}
         onMouseEnter={(e) => handleChapteronMouseEnter(e)}
         onMouseLeave={(e) => handleChapterMoseLeave(e)}
         onClick={(e) => handleChapterOnClik(e)}

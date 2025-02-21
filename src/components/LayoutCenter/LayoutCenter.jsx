@@ -17,7 +17,12 @@ export function LayoutCenter(props) {
     >
       <LeftBar />
       <MainCenterLayout isMobileDevice={props.isMobileDevice}>
-        <TopCenterBar firstText="status:" secondText="work in progress..." />
+        <TopCenterBar
+          firstText={props.isTitleGalery ? <>&nbsp;</> : "status:"}
+          secondText={
+            props.isTitleGalery ? props.nameOfProject : "work in progress..."
+          }
+        />
         <InsideMainLayout>
           <Hero
             isMobileDevice={props.isMobileDevice}
@@ -36,6 +41,7 @@ export function LayoutCenter(props) {
         isMobileDevice={props.isMobileDevice}
         topText="2"
         bottomText="II"
+        isBlur={props.isBlur}
       />
     </div>
   );

@@ -6,6 +6,7 @@ export function RightBar(props) {
       className={`${
         props.isMobileDevice ? styles.rightBarMobile : styles.rightBar
       }`}
+      style={{ filter: `${props.isBlur ? "blur(4px)" : "blur(0)"}` }}
     >
       <div className={styles.rightBarTop}>{props.topText}</div>
 

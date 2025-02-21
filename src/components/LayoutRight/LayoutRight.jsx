@@ -11,6 +11,7 @@ export function LayoutRight(props) {
       className={`${
         props.isMobileDevice ? styles.layoutRightMobile : styles.layoutRight
       }`}
+      style={{ filter: `${props.isBlur ? "blur(4px)" : "blur(0)"}` }}
     >
       <LeftBar />
       <MainCenterLayout isMobileDevice={props.isMobileDevice}>
