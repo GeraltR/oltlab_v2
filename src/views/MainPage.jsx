@@ -35,15 +35,27 @@ export function MainPage() {
       rightlabels: [{}],
       linkTo: "/",
     },
-    { id: 2, key: "a", label: "olt.lab", rightlabels: [{}], linkTo: "/oltlab" },
+    {
+      id: 2,
+      key: "a",
+      label: "olt.lab",
+      rightlabels: [{}],
+      linkTo: "https://www.instagram.com/olt.lab",
+    },
     {
       id: 3,
       key: "b",
       label: "tlo.gallery",
       rightlabels: [{}],
-      linkTo: "/tlogalery",
+      linkTo: "https://www.instagram.com/tlo_background",
     },
-    { id: 4, key: "c", label: "enojy", rightlabels: [{}], linkTo: "/enojy" },
+    {
+      id: 4,
+      key: "c",
+      label: "enojy",
+      rightlabels: [{}],
+      linkTo: "https://enojy.tumblr.com",
+    },
   ];
 
   const rightChapters = [

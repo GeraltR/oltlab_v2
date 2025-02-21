@@ -9,19 +9,16 @@ export function LeftChapter(props) {
   return (
     <>
       <div className={styles.leftChapterWithTopMargin}>
-        <TopLeftBar
-          firstText={props.chapters[0].label}
-          name={`project${props.chapters[0].id}Chapter`}
-          onMouseEnter={props.onMouseEnter}
-          onMouseLeave={props.onMouseLeave}
-        />
-        <InsideChapter></InsideChapter>
+        <div style={{ marginLeft: "1.5rem" }} id={props.name}>
+          {props.chapters[0].label}
+        </div>
       </div>
       <div className={styles.leftChapter}>
         <TopLeftBar
           chapter={props.chapters[1].key}
           firstText={props.chapters[1].label}
           marginLeft="1.5rem"
+          linkTo={props.chapters[1].linkTo}
           name={`project${props.chapters[1].id}Chapter`}
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
@@ -30,7 +27,7 @@ export function LeftChapter(props) {
           <p>contact</p>
           <ul>
             <li>
-              <NavLink>hello@oltlab.net</NavLink>
+              <NavLink to="mailto:hello@oltlab.net">hello@oltlab.net</NavLink>
             </li>
             <li>
               <SvgFranceFlag />
@@ -47,6 +44,7 @@ export function LeftChapter(props) {
           chapter={props.chapters[2].key}
           firstText={props.chapters[2].label}
           marginLeft="1.5rem"
+          linkTo={props.chapters[2].linkTo}
           name={`project${props.chapters[2].id}Chapter`}
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
@@ -57,6 +55,7 @@ export function LeftChapter(props) {
           chapter={props.chapters[3].key}
           firstText={props.chapters[3].label}
           marginLeft="1.5rem"
+          linkTo={props.chapters[3].linkTo}
           name={`project${props.chapters[3].id}Chapter`}
           onMouseEnter={props.onMouseEnter}
           onMouseLeave={props.onMouseLeave}
