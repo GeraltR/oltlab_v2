@@ -123,8 +123,6 @@ export function MainPage() {
         isMobileDevice={isMobileDevice}
         chapters={leftChapters}
         isBlur={galeryVisibled != ""}
-        onMouseEnter={(e) => handleChapteronMouseEnter(e)}
-        onMouseLeave={(e) => handleChapterMoseLeave(e)}
       />
       <LayoutCenter
         isMobileDevice={isMobileDevice}
