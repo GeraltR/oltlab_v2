@@ -13,14 +13,9 @@ export function LayoutLeft(props) {
       }`}
       style={{ filter: `${props.isBlur ? "blur(4px)" : "blur(0)"}` }}
     >
-      <LeftBar isMobileDevice={props.isMobileDevice} />
-      <MainCenterLayout isMobileDevice={props.isMobileDevice}>
-        <LeftChapter
-          chapters={props.chapters}
-          isMobileDevice={props.isMobileDevice}
-          onMouseEnter={props.onMouseEnter}
-          onMouseLeave={props.onMouseLeave}
-        />
+      <LeftBar {...props} />
+      <MainCenterLayout {...props}>
+        <LeftChapter {...props} />
         <div
           className={`${
             props.isMobileDevice
@@ -31,11 +26,7 @@ export function LayoutLeft(props) {
           all rights reserved
         </div>
       </MainCenterLayout>
-      <RightBar
-        isMobileDevice={props.isMobileDevice}
-        topText="1"
-        bottomText="I"
-      />
+      <RightBar {...props} topText="1" bottomText="I" />
     </div>
   );
 }

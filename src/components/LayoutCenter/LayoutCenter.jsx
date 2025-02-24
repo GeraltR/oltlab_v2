@@ -16,7 +16,7 @@ export function LayoutCenter(props) {
       }`}
     >
       <LeftBar />
-      <MainCenterLayout isMobileDevice={props.isMobileDevice}>
+      <MainCenterLayout {...props}>
         <TopCenterBar
           firstText={props.isTitleGalery ? <>&nbsp;</> : "status:"}
           secondText={
@@ -24,25 +24,13 @@ export function LayoutCenter(props) {
           }
         />
         <InsideMainLayout>
-          <Hero
-            isMobileDevice={props.isMobileDevice}
-            heighDeviceSize={props.heighDeviceSize}
-            heroImage={props.heroImage}
-            heroWidth={props.heroWidth}
-            heroHeight={props.heroHeight}
-            heroHidden={props.heroHidden}
-          />
+          <Hero {...props} />
         </InsideMainLayout>
         <BottomLogoBar>
           <FooterCenter />
         </BottomLogoBar>
       </MainCenterLayout>
-      <RightBar
-        isMobileDevice={props.isMobileDevice}
-        topText="2"
-        bottomText="II"
-        isBlur={props.isBlur}
-      />
+      <RightBar {...props} topText="2" bottomText="II" />
     </div>
   );
 }

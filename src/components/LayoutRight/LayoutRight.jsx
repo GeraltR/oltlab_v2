@@ -14,21 +14,10 @@ export function LayoutRight(props) {
       style={{ filter: `${props.isBlur ? "blur(4px)" : "blur(0)"}` }}
     >
       <LeftBar />
-      <MainCenterLayout isMobileDevice={props.isMobileDevice}>
-        <RightChapter
-          isMobileDevice={props.isMobileDevice}
-          isLandScape={props.isLandScape}
-          chapters={props.chapters}
-          onMouseEnter={props.onMouseEnter}
-          onMouseLeave={props.onMouseLeave}
-          onClick={props.onClick}
-        />
+      <MainCenterLayout {...props}>
+        <RightChapter {...props} />
       </MainCenterLayout>
-      <RightBar
-        isMobileDevice={props.isMobileDevice}
-        topText="3"
-        bottomText="III"
-      />
+      <RightBar {...props} topText="3" bottomText="III" />
     </div>
   );
 }
