@@ -11,6 +11,9 @@ import { OltLabGalery24 } from "./OltLabGalery24";
 import { OltLabGalery26 } from "./OltLabGalery26";
 import { BottomLogoBar } from "../components/BottomLogoBar/BottomLogoBar";
 import { FooterCenter } from "../components/FooterCenter/FooterCenter";
+import { OltLabGalery25 } from "./OltLabGalery25";
+import { OltLabGalery23 } from "./OltLabGalery23";
+import { OltLabGalery22 } from "./OltLabGalery22";
 
 let activeName = "";
 
@@ -179,8 +182,26 @@ export function MainPage() {
         isLandScape={isLandScape}
         onClick={(e) => handleChapterOnClik(e)}
       />
+      <OltLabGalery25
+        visible={galeryVisibled == 25}
+        isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
+        onClick={(e) => handleChapterOnClik(e)}
+      />
       <OltLabGalery24
         visible={galeryVisibled == 24}
+        isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
+        onClick={(e) => handleChapterOnClik(e)}
+      />
+      <OltLabGalery23
+        visible={galeryVisibled == 23}
+        isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
+        onClick={(e) => handleChapterOnClik(e)}
+      />
+      <OltLabGalery22
+        visible={galeryVisibled == 22}
         isMobileDevice={isMobileDevice}
         isLandScape={isLandScape}
         onClick={(e) => handleChapterOnClik(e)}
