@@ -4,8 +4,6 @@ import { InsideChapter } from "../InsideChapter/InsideChapter";
 import { TopRightBar } from "../TopRightBar/TopRightBar";
 import styles from "./RightChapter.module.css";
 import { TopLeftBar } from "../TopLeftBar/TopLeftBar";
-import { BottomLogoBar } from "../BottomLogoBar/BottomLogoBar";
-import { FooterCenter } from "../FooterCenter/FooterCenter";
 
 export function RightChapter(props) {
   const projects = [
@@ -141,13 +139,6 @@ export function RightChapter(props) {
         />
         <div className={styles.rightChapterComingSoon}>coming soon...</div>
       </div>
-      {props.isMobileDevice ? (
-        <BottomLogoBar>
-          <FooterCenter />
-        </BottomLogoBar>
-      ) : (
-        <></>
-      )}
     </>
   );
 }

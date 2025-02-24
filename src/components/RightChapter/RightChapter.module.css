@@ -58,6 +58,7 @@
 }
 
 .rightChapterComingSoon {
+  z-index: -2;
   width: 100%;
   text-align: left;
   text-wrap: nowrap;

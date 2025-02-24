@@ -26,7 +26,7 @@ export function LayoutCenter(props) {
         <InsideMainLayout>
           <Hero {...props} />
         </InsideMainLayout>
-        <BottomLogoBar>
+        <BottomLogoBar {...props}>
           <FooterCenter />
         </BottomLogoBar>
       </MainCenterLayout>
