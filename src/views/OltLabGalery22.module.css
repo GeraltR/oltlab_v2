@@ -99,12 +99,12 @@
   top: 70%;
 }
 .oltLabGalery22Img_3Mobile {
-  z-index: 10;
+  z-index: 11;
   position: absolute;
-  max-width: 137px;
-  max-height: 206px;
-  left: 23%;
-  top: 52%;
+  max-width: 172px;
+  max-height: 258px;
+  left: -39%;
+  top: 65%;
 }
 
 .oltLabGalery22Img_4 {
@@ -139,18 +139,5 @@
   max-height: 292px;
   left: -28%;
   top: 58%;
-  background-color: transparent;
-}
-.oltLabGalery22Img_6 {
-  display: none;
-}
-
-.oltLabGalery22Img_6Mobile {
-  z-index: 10;
-  position: absolute;
-  max-width: 172px;
-  max-height: 258px;
-  left: -38%;
-  top: 60%;
   background-color: transparent;
 }

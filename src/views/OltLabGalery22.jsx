@@ -54,14 +54,6 @@ export function OltLabGalery22(props) {
         }`}
         src={import.meta.env.VITE_BASE_URL + "/img/galery/adrianzert/5.png"}
       />
-      <img
-        className={`${
-          props.isMobileDevice && !props.isLandScape
-            ? styles.oltLabGalery22Img_6Mobile
-            : styles.oltLabGalery22Img_6
-        }`}
-        src={import.meta.env.VITE_BASE_URL + "/img/mainadrianzert.png"}
-      />
     </div>
   );
 }

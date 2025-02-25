@@ -7,13 +7,14 @@ import { MAIN_IMAGE } from "../constans/images";
 import { OltLabGalery29 } from "./OltLabGalery29";
 import { OltLabGalery28 } from "./OltLabGalery28";
 import { OltLabGalery27 } from "./OltLabGalery27";
-import { OltLabGalery24 } from "./OltLabGalery24";
 import { OltLabGalery26 } from "./OltLabGalery26";
-import { BottomLogoBar } from "../components/BottomLogoBar/BottomLogoBar";
-import { FooterCenter } from "../components/FooterCenter/FooterCenter";
 import { OltLabGalery25 } from "./OltLabGalery25";
+import { OltLabGalery24 } from "./OltLabGalery24";
 import { OltLabGalery23 } from "./OltLabGalery23";
 import { OltLabGalery22 } from "./OltLabGalery22";
+import { OltLabGalery21 } from "./OltLabGalery21";
+import { BottomLogoBar } from "../components/BottomLogoBar/BottomLogoBar";
+import { FooterCenter } from "../components/FooterCenter/FooterCenter";
 
 let activeName = "";
 
@@ -202,6 +203,12 @@ export function MainPage() {
       />
       <OltLabGalery22
         visible={galeryVisibled == 22}
+        isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
+        onClick={(e) => handleChapterOnClik(e)}
+      />
+      <OltLabGalery21
+        visible={galeryVisibled == 21}
         isMobileDevice={isMobileDevice}
         isLandScape={isLandScape}
         onClick={(e) => handleChapterOnClik(e)}
