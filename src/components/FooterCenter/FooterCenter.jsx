@@ -1,5 +1,4 @@
 import styles from "./FooterCenter.module.css";
-import logo from "../../img/logooltlab.png";
 
 export function FooterCenter() {
   return (
@@ -10,9 +9,7 @@ export function FooterCenter() {
           <div className={styles.logoInsideRight}>| Paris FR</div>
         </div>
         <div>
-          <div className={styles.logoInsideLeft}>
-            <img src={logo} />
-          </div>
+          <div className={styles.logoInsideLeftItalic}>olt.lab</div>
           <div className={styles.logoInsideRight}>| 2025</div>
         </div>
       </div>

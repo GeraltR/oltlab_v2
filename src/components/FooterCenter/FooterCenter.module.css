@@ -52,3 +52,12 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
+
+.logoInsideLeftItalic {
+  font-family: "Instrument Serif Italic";
+  margin: 0;
+  float: right;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
