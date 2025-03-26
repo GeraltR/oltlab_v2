@@ -5,7 +5,6 @@ import { RightBar } from "../RightBar/RightBar";
 import styles from "./LayoutLeft.module.css";
 
 export function LayoutLeft(props) {
-  //
   return (
     <div
       className={`${

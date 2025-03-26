@@ -128,6 +128,7 @@ export function MainPage() {
       {/* {`${isMobileDevice ? "tak" : "nie"}`} */}
       <LayoutLeft
         isMobileDevice={isMobileDevice}
+        isLandScape={isLandScape}
         chapters={leftChapters}
         isBlur={galeryVisibled != ""}
       />

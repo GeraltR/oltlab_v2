@@ -4,6 +4,7 @@ import { InsideChapter } from "../InsideChapter/InsideChapter";
 import { SVGPolishFlag } from "../svgPolishFlag/svgPolishFlag";
 import SvgFranceFlag from "../SvgFranceFlag/SvgFranceFlag";
 import { NavLink } from "react-router-dom";
+import { GifLogo } from "../GifLogo/GifLogo";
 
 export function LeftChapter(props) {
   return (
@@ -12,6 +13,10 @@ export function LeftChapter(props) {
         <div style={{ marginLeft: "1.5rem" }} id={props.name}>
           {props.chapters[0].label}
         </div>
+        <GifLogo
+          isMobileDevice={props.isMobileDevice}
+          isLandScape={props.isLandScape}
+        />
       </div>
       <div className={styles.leftChapter}>
         <TopLeftBar
