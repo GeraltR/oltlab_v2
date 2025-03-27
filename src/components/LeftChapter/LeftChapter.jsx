@@ -9,9 +9,11 @@ import { GifLogo } from "../GifLogo/GifLogo";
 export function LeftChapter(props) {
   return (
     <>
-      <div className={styles.leftChapterWithTopMargin}>
-        <div style={{ marginLeft: "1.5rem" }} id={props.name}>
-          {props.chapters[0].label}
+      <div>
+        <div className={styles.leftChapterWithTopMargin}>
+          <div style={{ marginLeft: "1.5rem" }} id={props.name}>
+            {props.chapters[0].label}
+          </div>
         </div>
         <GifLogo
           isMobileDevice={props.isMobileDevice}
