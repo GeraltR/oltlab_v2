@@ -9,17 +9,21 @@ import { GifLogo } from "../GifLogo/GifLogo";
 export function LeftChapter(props) {
   return (
     <>
-      <div>
-        <div className={styles.leftChapterWithTopMargin}>
-          <div style={{ marginLeft: "1.5rem" }} id={props.name}>
-            {props.chapters[0].label}
-          </div>
+      <div className={styles.leftChapterWithTopMargin}>
+        <div
+          className={`${
+            props.isMobileDevice && !props.isLandScape
+              ? styles.leftOltTloWebsiteMobile
+              : styles.leftOltTloWebsite
+          }`}
+        >
+          {props.chapters[0].label}
         </div>
-        <GifLogo
-          isMobileDevice={props.isMobileDevice}
-          isLandScape={props.isLandScape}
-        />
       </div>
+      <GifLogo
+        isMobileDevice={props.isMobileDevice}
+        isLandScape={props.isLandScape}
+      />
       <div className={styles.leftChapter}>
         <TopLeftBar
           chapter={props.chapters[1].key}

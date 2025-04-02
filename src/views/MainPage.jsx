@@ -41,6 +41,7 @@ export function MainPage() {
       label: "olt|tlo website",
       rightlabels: [{}],
       linkTo: "/",
+      name: "LeftFirst",
     },
     {
       id: 2,
@@ -48,6 +49,7 @@ export function MainPage() {
       label: "olt.lab",
       rightlabels: [{}],
       linkTo: "https://www.instagram.com/olt.lab",
+      name: "LeftA",
     },
     {
       id: 3,
@@ -55,6 +57,7 @@ export function MainPage() {
       label: "tlo.gallery",
       rightlabels: [{}],
       linkTo: "https://www.instagram.com/tlo_background",
+      name: "LeftB",
     },
     {
       id: 4,
@@ -62,6 +65,7 @@ export function MainPage() {
       label: "enojy",
       rightlabels: [{}],
       linkTo: "https://enojy.tumblr.com",
+      name: "Left",
     },
   ];
 
