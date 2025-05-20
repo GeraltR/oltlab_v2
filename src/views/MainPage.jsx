@@ -46,7 +46,7 @@ export function MainPage() {
     {
       id: 2,
       key: "a",
-      label: "olt.lab",
+      label: "olt.lab instagram",
       rightlabels: [{}],
       linkTo: "https://www.instagram.com/olt.lab",
       name: "LeftA",
@@ -54,7 +54,7 @@ export function MainPage() {
     {
       id: 3,
       key: "b",
-      label: "tlo.gallery",
+      label: "tlo.gallery instagram",
       rightlabels: [{}],
       linkTo: "https://www.instagram.com/tlo_background",
       name: "LeftB",
@@ -62,7 +62,7 @@ export function MainPage() {
     {
       id: 4,
       key: "c",
-      label: "enojy",
+      label: "editorial",
       rightlabels: [{}],
       linkTo: "https://enojy.tumblr.com",
       name: "Left",
